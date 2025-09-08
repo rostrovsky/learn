@@ -15,6 +15,8 @@
       --card: #ffffff;
       --shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
       --radius: 18px;
+      --primary: #7c3aed; /* purple-600 */
+      --primary-hover: #6d28d9; /* purple-700 */
     }
 
     * { box-sizing: border-box; }
@@ -43,24 +45,6 @@
     header h1 { font-size: clamp(20px, 2.5vw, 28px); margin: 0; letter-spacing: -0.02em; }
     header .subtitle { color: var(--muted); font-size: 14px; }
 
-    .dropzone {
-      border: 2px dashed var(--accent-2);
-      border-radius: var(--radius);
-      padding: 28px; 
-      text-align: center; 
-      transition: border-color .2s, background-color .2s, transform .1s ease;
-      background: #fafafa;
-      cursor: pointer;
-      user-select: none;
-    }
-    .dropzone:hover { border-color: var(--ring); }
-    .dropzone.active { border-color: var(--ring); background: #f3f4f6; transform: translateY(-1px); }
-    .dropzone h2 { margin: 0 0 6px; font-size: 18px; }
-    .dropzone p { margin: 0; color: var(--muted); font-size: 14px; }
-
-    .controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 18px 0 8px; flex-wrap: wrap; }
-    .controls .left, .controls .right { display: flex; gap: 8px; align-items: center; }
-
     .btn {
       appearance: none; border: 1px solid var(--accent-2); background: #fff; color: var(--fg);
       border-radius: 12px; padding: 10px 14px; font-size: 14px; cursor: pointer; 
@@ -70,6 +54,17 @@
     .btn:hover { border-color: #cbd5e1; }
     .btn:active { transform: translateY(1px); }
     .btn[disabled] { opacity: .45; cursor: not-allowed; }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      font-weight: 500;
+    }
+    .btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+
+    .controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 18px 0 8px; flex-wrap: wrap; }
+    .controls .left, .controls .right { display: flex; gap: 8px; align-items: center; }
 
     .counter { color: var(--muted); font-size: 13px; }
     .title { font-weight: 600; }
@@ -124,15 +119,10 @@
           <h1>Flashcards Deck</h1>
         </div>
         <div class="right">
+          <button id="loadJsonBtn" class="btn btn-primary" type="button" title="Load JSON file">Load JSON</button>
           <button id="demoBtn" class="btn" type="button" title="Load a small demo deck">Load demo</button>
         </div>
       </header>
-
-      <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Drop a JSON deck or click to choose">
-        <h2>Drop your flashcards <code>.json</code> file here</h2>
-        <p>…or click to pick a file. Your data stays in your browser.</p>
-        <input id="fileInput" type="file" accept="application/json,.json" class="hidden" />
-      </div>
 
       <div id="errors" class="errors"></div>
 
@@ -166,6 +156,8 @@
       <div>Minimal, self‑contained. No network, no tracking.</div>
     </footer>
   </div>
+
+  <input id="fileInput" type="file" accept="application/json,.json" class="hidden" />
 
   <script>
   // --- Minimal validator tailored to the given schema ---
@@ -235,7 +227,6 @@
   };
 
   // --- Elements ---
-  const dropzone = document.getElementById('dropzone');
   const fileInput = document.getElementById('fileInput');
   const errorsEl = document.getElementById('errors');
   const controls = document.getElementById('controls');
@@ -247,6 +238,7 @@
   const hintEl = document.getElementById('hint');
   const cardCount = document.getElementById('cardCount')
 
+  const loadJsonBtn = document.getElementById('loadJsonBtn');
   const prevBtn = document.getElementById('prevBtn');
   const flipBtn = document.getElementById('flipBtn');
   const nextBtn = document.getElementById('nextBtn');
@@ -254,19 +246,8 @@
   const restartBtn = document.getElementById('restartBtn');
   const demoBtn = document.getElementById('demoBtn');
 
-  // --- Drag & Drop ---
-  ;['dragenter','dragover'].forEach(evt => {
-    dropzone.addEventListener(evt, (e) => { e.preventDefault(); e.stopPropagation(); dropzone.classList.add('active'); });
-  });
-  ;['dragleave','drop'].forEach(evt => {
-    dropzone.addEventListener(evt, (e) => { e.preventDefault(); e.stopPropagation(); dropzone.classList.remove('active'); });
-  });
-  dropzone.addEventListener('drop', (e) => {
-    const file = e.dataTransfer.files && e.dataTransfer.files[0];
-    if (file) readFile(file);
-  });
-  dropzone.addEventListener('click', () => fileInput.click());
-  dropzone.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }});
+  // --- File loading ---
+  loadJsonBtn.addEventListener('click', () => fileInput.click());
   fileInput.addEventListener('change', (e) => {
     const file = e.target.files && e.target.files[0];
     if (file) readFile(file);
