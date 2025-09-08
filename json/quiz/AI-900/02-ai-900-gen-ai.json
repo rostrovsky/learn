@@ -1,0 +1,486 @@
+{
+  "title": "Quiz 2: Generative AI & LLM Architecture",
+  "version": 1,
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "prompt": "What is the foundational neural network architecture used by modern Large Language Models (LLMs) like GPT?",
+      "choices": [
+        { "id": 1, "text": "Recurrent Neural Network (RNN)", "is_correct": false },
+        { "id": 2, "text": "Convolutional Neural Network (CNN)", "is_correct": false },
+        { "id": 3, "text": "Transformer", "is_correct": true },
+        { "id": 4, "text": "Support Vector Machine (SVM)", "is_correct": false }
+      ],
+      "explanation": "The Transformer architecture, introduced in the paper 'Attention Is All You Need', is the foundation for modern LLMs due to its efficient handling of sequential data through self-attention mechanisms."
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "prompt": "In the context of LLMs, what is 'inference'?",
+      "choices": [
+        { "id": 1, "text": "The process of training the model on a large dataset.", "is_correct": false },
+        { "id": 2, "text": "The process where a trained model repeatedly predicts the next token to generate an output.", "is_correct": true },
+        { "id": 3, "text": "The process of converting text into numerical vectors.", "is_correct": false },
+        { "id": 4, "text": "The process of updating the model's parameters with new information.", "is_correct": false }
+      ],
+      "explanation": "Inference is the process where a fully trained LLM takes a prompt and generates a response by predicting the next token in the sequence one by one until an end condition is met."
+    },
+    {
+      "id": 3,
+      "type": "single",
+      "prompt": "What is the primary purpose of an 'embedding model' in an LLM pipeline?",
+      "choices": [
+        { "id": 1, "text": "To split the input text into a sequence of tokens.", "is_correct": false },
+        { "id": 2, "text": "To convert tokens into numerical vectors that capture semantic meaning.", "is_correct": true },
+        { "id": 3, "text": "To add information about the position of each word in a sentence.", "is_correct": false },
+        { "id": 4, "text": "To generate the final text output word by word.", "is_correct": false }
+      ],
+      "explanation": "An embedding model's role is to convert discrete tokens into continuous vectors (embeddings) where semantically similar words are represented by numerically close vectors."
+    },
+    {
+      "id": 4,
+      "type": "multiple",
+      "prompt": "What kind of content can Generative AI create?",
+      "choices": [
+        { "id": 1, "text": "Natural language, such as summaries and conversations.", "is_correct": true },
+        { "id": 2, "text": "Computer code in various programming languages.", "is_correct": true },
+        { "id": 3, "text": "Images generated from textual descriptions.", "is_correct": true },
+        { "id": 4, "text": "The original datasets used to train the models.", "is_correct": false }
+      ],
+      "explanation": "Generative AI is capable of producing a wide range of original content, including natural language, code, and images."
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "prompt": "Why is 'positional encoding' a necessary step in the Transformer architecture?",
+      "choices": [
+        { "id": 1, "text": "To reduce the number of parameters in the model.", "is_correct": false },
+        { "id": 2, "text": "To encrypt the input data for security.", "is_correct": false },
+        { "id": 3, "text": "Because the self-attention mechanism itself does not inherently process word order.", "is_correct": true },
+        { "id": 4, "text": "To convert the output tokens back into human-readable text.", "is_correct": false }
+      ],
+      "explanation": "The Transformer's self-attention mechanism processes all tokens in parallel and does not have a built-in sense of sequence. Positional encoding injects information about the order or position of tokens into their embeddings."
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "prompt": "What is the term for the small units of text (like words, subwords, or punctuation) that an LLM processes?",
+      "choices": [
+        { "id": 1, "text": "Vectors", "is_correct": false },
+        { "id": 2, "text": "Parameters", "is_correct": false },
+        { "id": 3, "text": "Neurons", "is_correct": false },
+        { "id": 4, "text": "Tokens", "is_correct": true }
+      ],
+      "explanation": "Text is broken down into smaller pieces called tokens through a process called tokenization. These tokens are the basic units of processing for an LLM."
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "prompt": "The 'self-attention' mechanism in a Transformer allows the model to:",
+      "choices": [
+        { "id": 1, "text": "Weigh the importance of different words in the input relative to each other.", "is_correct": true },
+        { "id": 2, "text": "Focus only on the most recently processed word.", "is_correct": false },
+        { "id": 3, "text": "Randomly ignore certain words to improve generalization.", "is_correct": false },
+        { "id": 4, "text": "Correct spelling and grammar mistakes automatically.", "is_correct": false }
+      ],
+      "explanation": "Self-attention is a key innovation of the Transformer model. It enables the model to assess the relationships between all tokens in a sequence and weigh their importance for understanding context, even across long distances."
+    },
+    {
+      "id": 8,
+      "type": "single",
+      "prompt": "Models like GPT are often described as 'decoder-only' Transformers. What does this imply?",
+      "choices": [
+        { "id": 1, "text": "They can understand text but cannot generate it.", "is_correct": false },
+        { "id": 2, "text": "They are primarily structured for next-token prediction and text generation tasks.", "is_correct": true },
+        { "id": 3, "text": "They do not use self-attention mechanisms.", "is_correct": false },
+        { "id": 4, "text": "They are smaller and less powerful than models with encoders.", "is_correct": false }
+      ],
+      "explanation": "While the original Transformer had both an encoder and a decoder, many modern generative models like GPT use a decoder-only architecture, which is highly effective for next-token prediction and thus text generation."
+    },
+    {
+      "id": 9,
+      "type": "single",
+      "prompt": "What is a 'prompt' in the context of interacting with an LLM?",
+      "choices": [
+        { "id": 1, "text": "The final generated output from the model.", "is_correct": false },
+        { "id": 2, "text": "A performance metric used to evaluate the model.", "is_correct": false },
+        { "id": 3, "text": "The natural-language instructions or input given to the model.", "is_correct": true },
+        { "id": 4, "text": "A trainable parameter inside the model's neural network.", "is_correct": false }
+      ],
+      "explanation": "A prompt is the input text, question, or instruction provided by a user to an LLM to guide its response. The quality of the prompt heavily influences the quality of the output."
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "prompt": "Are the parameters (weights and biases) of a pre-trained LLM updated during the inference process?",
+      "choices": [
+        { "id": 1, "text": "Yes, they are fine-tuned with every user query.", "is_correct": false },
+        { "id": 2, "text": "No, at inference time the model's parameters are read-only.", "is_correct": true },
+        { "id": 3, "text": "Only if the user specifically requests it in the prompt.", "is_correct": false },
+        { "id": 4, "text": "Yes, but only the bias parameters are updated.", "is_correct": false }
+      ],
+      "explanation": "Once an LLM is trained, its parameters are fixed. During inference (when it's generating responses), the model acts in a read-only capacity and does not learn or update its weights."
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "prompt": "A Large Language Model is fundamentally trained to do what?",
+      "choices": [
+        { "id": 1, "text": "Verify the factual accuracy of information.", "is_correct": false },
+        { "id": 2, "text": "Predict the next token in a sequence.", "is_correct": true },
+        { "id": 3, "text": "Understand human emotions.", "is_correct": false },
+        { "id": 4, "text": "Browse the live internet for answers.", "is_correct": false }
+      ],
+      "explanation": "At its core, an LLM is a deep learning model trained on a massive text corpus to predict the most probable next token (word or subword) given a sequence of input tokens."
+    },
+    {
+      "id": 12,
+      "type": "single",
+      "prompt": "What is meant by the 'context window' of an LLM?",
+      "choices": [
+        { "id": 1, "text": "The physical size of the GPUs used for training.", "is_correct": false },
+        { "id": 2, "text": "The number of topics the model has knowledge about.", "is_correct": false },
+        { "id": 3, "text": "The maximum number of tokens (input + output) the model can handle in a single interaction.", "is_correct": true },
+        { "id": 4, "text": "The user interface where prompts are entered.", "is_correct": false }
+      ],
+      "explanation": "The context window defines the limit on the amount of text (measured in tokens) that the model can process at one time. This includes both the user's input prompt and the model's generated response."
+    },
+    {
+      "id": 13,
+      "type": "single",
+      "prompt": "The practice of carefully crafting inputs to get the best possible responses from an LLM is known as:",
+      "choices": [
+        { "id": 1, "text": "Model Training", "is_correct": false },
+        { "id": 2, "text": "Prompt Engineering", "is_correct": true },
+        { "id": 3, "text": "Inference Tuning", "is_correct": false },
+        { "id": 4, "text": "Parameter Optimization", "is_correct": false }
+      ],
+      "explanation": "Prompt engineering is the art and science of designing effective prompts to guide an LLM's behavior and elicit high-quality, relevant, and accurate responses."
+    },
+    {
+      "id": 14,
+      "type": "single",
+      "prompt": "If you provide an LLM with a few examples of a task in the prompt before asking it to perform that task on new data, what technique are you using?",
+      "choices": [
+        { "id": 1, "text": "Zero-shot prompting", "is_correct": false },
+        { "id": 2, "text": "Fine-tuning", "is_correct": false },
+        { "id": 3, "text": "Few-shot prompting", "is_correct": true },
+        { "id": 4, "text": "Grounding", "is_correct": false }
+      ],
+      "explanation": "Few-shot prompting involves including a few examples (shots) of the desired input-output format within the prompt itself to guide the model's behavior without actually retraining it."
+    },
+    {
+      "id": 15,
+      "type": "multiple",
+      "prompt": "Which statements are true about the data used to train foundational LLMs?",
+      "choices": [
+        { "id": 1, "text": "It typically includes huge datasets from the public web, Wikipedia, and books.", "is_correct": true },
+        { "id": 2, "text": "It consists of small, highly curated and specialized datasets.", "is_correct": false },
+        { "id": 3, "text": "The training process requires substantial GPU compute power.", "is_correct": true },
+        { "id": 4, "text": "The datasets are updated in real-time as the model is running.", "is_correct": false }
+      ],
+      "explanation": "Large Language Models are pre-trained on massive and diverse text corpora from sources like the web and books, a process that is computationally intensive and requires significant GPU resources."
+    },
+    {
+      "id": 16,
+      "type": "single",
+      "prompt": "What does the 'masked self-attention' mechanism in a decoder-only Transformer ensure?",
+      "choices": [
+        { "id": 1, "text": "It ensures the model pays equal attention to all words.", "is_correct": false },
+        { "id": 2, "text": "It ensures that when predicting a token, the model can only attend to previous tokens.", "is_correct": true },
+        { "id": 3, "text": "It hides or 'masks' personally identifiable information for privacy.", "is_correct": false },
+        { "id": 4, "text": "It allows the model to attend to both past and future tokens for better context.", "is_correct": false }
+      ],
+      "explanation": "In a generative (decoder-only) model, masked self-attention is used to prevent a token from 'seeing' subsequent tokens during training. This is crucial for the task of predicting the next token in a sequence."
+    },
+    {
+      "id": 17,
+      "type": "single",
+      "prompt": "Adding specific, timely, external data (like recent emails or search results) to an LLM prompt to provide relevant context is a technique known as:",
+      "choices": [
+        { "id": 1, "text": "Fine-tuning", "is_correct": false },
+        { "id": 2, "text": "Tokenization", "is_correct": false },
+        { "id": 3, "text": "Grounding", "is_correct": true },
+        { "id": 4, "text": "Inference", "is_correct": false }
+      ],
+      "explanation": "Grounding, also associated with Retrieval-Augmented Generation (RAG), is the process of augmenting a prompt with external data to provide the LLM with context it wouldn't otherwise have, improving factuality and relevance."
+    },
+    {
+      "id": 18,
+      "type": "single",
+      "prompt": "What do the 'parameters' of an LLM, often numbered in the billions, primarily consist of?",
+      "choices": [
+        { "id": 1, "text": "The number of users who can access the model simultaneously.", "is_correct": false },
+        { "id": 2, "text": "The weights and biases of the connections within its neural network.", "is_correct": true },
+        { "id": 3, "text": "The set of all possible tokens the model can generate.", "is_correct": false },
+        { "id": 4, "text": "The rules of grammar for all supported languages.", "is_correct": false }
+      ],
+      "explanation": "The parameters of an LLM are the weights and biases in its neural network. These are the values learned during the training process that enable the model to make predictions."
+    },
+    {
+      "id": 19,
+      "type": "single",
+      "prompt": "If an embedding model represents the words 'king' and 'queen' as vectors that are numerically close to each other, this demonstrates its ability to capture:",
+      "choices": [
+        { "id": 1, "text": "Grammatical structure", "is_correct": false },
+        { "id": 2, "text": "Word length", "is_correct": false },
+        { "id": 3, "text": "Semantic meaning", "is_correct": true },
+        { "id": 4, "text": "Positional information", "is_correct": false }
+      ],
+      "explanation": "Embeddings are vector representations where the distance and direction between vectors correspond to semantic relationships. Words with similar meanings, like 'king' and 'queen', will have vectors that are close in the embedding space."
+    },
+    {
+      "id": 20,
+      "type": "multiple",
+      "prompt": "Which of the following are considered key techniques in prompt engineering?",
+      "choices": [
+        { "id": 1, "text": "Being explicit with instructions and constraints.", "is_correct": true },
+        { "id": 2, "text": "Using role-playing (e.g., 'Act as a professional copywriter').", "is_correct": true },
+        { "id": 3, "text": "Providing few-shot examples of the desired output format.", "is_correct": true },
+        { "id": 4, "text": "Altering the model's internal weight parameters directly.", "is_correct": false }
+      ],
+      "explanation": "Effective prompt engineering techniques include being explicit, using role specification, and providing zero-shot or few-shot examples to guide the model's response."
+    },
+    {
+      "id": 21,
+      "type": "single",
+      "prompt": "Are today's Large Language Models considered Artificial General Intelligence (AGI)?",
+      "choices": [
+        { "id": 1, "text": "Yes, they can learn and reason about any task a human can.", "is_correct": false },
+        { "id": 2, "text": "No, they are specialized for next-token prediction and lack true generalized learning abilities.", "is_correct": true },
+        { "id": 3, "text": "Only the largest models, like GPT-4, are considered AGI.", "is_correct": false },
+        { "id": 4, "text": "They are a primitive form of AGI that will become fully sentient soon.", "is_correct": false }
+      ],
+      "explanation": "LLMs are not AGI. While powerful for language tasks, their core function is next-token prediction, and they do not possess the general learning and reasoning capabilities characteristic of AGI."
+    },
+    {
+      "id": 22,
+      "type": "single",
+      "prompt": "What is the function of the feed-forward network layers within a Transformer block?",
+      "choices": [
+        { "id": 1, "text": "To calculate the attention scores between tokens.", "is_correct": false },
+        { "id": 2, "text": "To apply a per-token transformation to create richer feature representations.", "is_correct": true },
+        { "id": 3, "text": "To convert the input text into tokens.", "is_correct": false },
+        { "id": 4, "text": "To add positional information to the embeddings.", "is_correct": false }
+      ],
+      "explanation": "After the self-attention step, the output for each token is passed through a feed-forward neural network. This layer transforms the attended representations into more complex and richer features."
+    },
+    {
+      "id": 23,
+      "type": "single",
+      "prompt": "The entire process of an LLM taking a prompt and generating a response can be summarized as:",
+      "choices": [
+        { "id": 1, "text": "Tokenize -> Embed -> Add Position -> Self-Attention -> Predict Next Token (repeatedly).", "is_correct": true },
+        { "id": 2, "text": "Embed -> Self-Attention -> Tokenize -> Predict Next Token.", "is_correct": false },
+        { "id": 3, "text": "Predict Next Token -> Tokenize -> Embed -> Self-Attention.", "is_correct": false },
+        { "id": 4, "text": "Self-Attention -> Embed -> Tokenize -> Add Position -> Predict Next Token.", "is_correct": false }
+      ],
+      "explanation": "The high-level flow for LLM text generation is: first, tokenize the input; second, create embeddings for the tokens; third, add positional encoding; fourth, process through self-attention layers; and finally, predict the next token, appending it to the sequence and repeating the process."
+    },
+    {
+      "id": 24,
+      "type": "single",
+      "prompt": "What is a 'vector index' used for in the context of AI?",
+      "choices": [
+        { "id": 1, "text": "To store the vocabulary of tokens the model knows.", "is_correct": false },
+        { "id": 2, "text": "A data structure that enables efficient similarity searches over embeddings.", "is_correct": true },
+        { "id": 3, "text": "A list of all the parameters in the neural network.", "is_correct": false },
+        { "id": 4, "text": "A log of all the prompts a user has submitted.", "is_correct": false }
+      ],
+      "explanation": "A vector index is a specialized data structure designed to quickly find the nearest neighbors to a given query vector from a large set of embedding vectors. This is fundamental for semantic search."
+    },
+    {
+      "id": 25,
+      "type": "single",
+      "prompt": "What are 'Small Language Models' (SLMs)?",
+      "choices": [
+        { "id": 1, "text": "An older, outdated term for LLMs.", "is_correct": false },
+        { "id": 2, "text": "LLMs that have been compressed, losing most of their capabilities.", "is_correct": false },
+        { "id": 3, "text": "Smaller, specialized models optimized for cost and latency on specific tasks.", "is_correct": true },
+        { "id": 4, "text": "LLMs designed to run exclusively on mobile phones.", "is_correct": false }
+      ],
+      "explanation": "SLMs are smaller models that are often specialized for a particular domain or task. They are designed to be more efficient, offering lower cost and latency compared to their larger, more general-purpose counterparts."
+    },
+    {
+      "id": 26,
+      "type": "single",
+      "prompt": "In prompt engineering, what is the 'role-playing' technique?",
+      "choices": [
+        { "id": 1, "text": "Asking the model to play a game.", "is_correct": false },
+        { "id": 2, "text": "Instructing the model to act as a specific persona or expert (e.g., 'Act as a historian').", "is_correct": true },
+        { "id": 3, "text": "Having multiple users prompt the model at the same time.", "is_correct": false },
+        { "id": 4, "text": "A method for training the model on conversational data.", "is_correct": false }
+      ],
+      "explanation": "The role-playing or role-prompting technique involves telling the model to adopt a specific persona, which helps frame its response style, tone, and knowledge base appropriately for the task."
+    },
+    {
+      "id": 27,
+      "type": "single",
+      "prompt": "What does the term 'tokenization' refer to?",
+      "choices": [
+        { "id": 1, "text": "The final step of generating a response.", "is_correct": false },
+        { "id": 2, "text": "A security measure to protect user data.", "is_correct": false },
+        { "id": 3, "text": "The process of splitting input text into smaller units for the model to process.", "is_correct": true },
+        { "id": 4, "text": "The creation of vector embeddings from words.", "is_correct": false }
+      ],
+      "explanation": "Tokenization is the initial step in processing language, where text is broken down into a sequence of tokens (words, subwords, punctuation) that are then mapped to numerical IDs."
+    },
+    {
+      "id": 28,
+      "type": "single",
+      "prompt": "How do newer GPT versions like GPT-4 Turbo typically improve upon older versions like GPT-3.5?",
+      "choices": [
+        { "id": 1, "text": "They only increase the speed of inference.", "is_correct": false },
+        { "id": 2, "text": "They have more parameters and larger context windows.", "is_correct": true },
+        { "id": 3, "text": "They remove the need for prompt engineering.", "is_correct": false },
+        { "id": 4, "text": "They are exclusively trained on a single language.", "is_correct": false }
+      ],
+      "explanation": "Newer versions of GPT models generally feature more parameters (enhancing capability) and larger context windows (allowing for longer and more complex interactions)."
+    },
+    {
+      "id": 29,
+      "type": "single",
+      "prompt": "What is the key benefit of the parallelizable training enabled by the Transformer architecture?",
+      "choices": [
+        { "id": 1, "text": "It allows models to be trained on much larger datasets more efficiently than older sequential models like RNNs.", "is_correct": true },
+        { "id": 2, "text": "It means the model can be used by multiple users in parallel.", "is_correct": false },
+        { "id": 3, "text": "It reduces the number of parameters required for the model.", "is_correct": false },
+        { "id": 4, "text": "It guarantees that the model will not have any biases.", "is_correct": false }
+      ],
+      "explanation": "Unlike older architectures like RNNs that process data sequentially, the Transformer's attention mechanism can process all tokens at once. This allows for massive parallelization on modern hardware (GPUs), which is crucial for training on web-scale datasets."
+    },
+    {
+      "id": 30,
+      "type": "single",
+      "prompt": "A prompt that asks an LLM a direct question without providing any examples of how to answer is called:",
+      "choices": [
+        { "id": 1, "text": "Few-shot prompting", "is_correct": false },
+        { "id": 2, "text": "Role prompting", "is_correct": false },
+        { "id": 3, "text": "Zero-shot prompting", "is_correct": true },
+        { "id": 4, "text": "Meta prompting", "is_correct": false }
+      ],
+      "explanation": "In zero-shot prompting, the model is expected to understand and perform the task based on its pre-trained knowledge, without any specific examples provided in the prompt."
+    },
+    {
+      "id": 31,
+      "type": "single",
+      "prompt": "What is a major reason LLMs can sometimes be weak at tasks like complex arithmetic?",
+      "choices": [
+        { "id": 1, "text": "They were not trained on any numbers.", "is_correct": false },
+        { "id": 2, "text": "Their core function is next-token prediction, which is not well-suited for precise, multi-step calculations.", "is_correct": true },
+        { "id": 3, "text": "They lack the memory to store numbers.", "is_correct": false },
+        { "id": 4, "text": "Arithmetic is a feature reserved for more advanced AGI systems.", "is_correct": false }
+      ],
+      "explanation": "LLMs excel at language patterns, but their fundamental design of predicting the next token makes them less reliable for tasks requiring precise, procedural logic like complex mathematics."
+    },
+    {
+      "id": 32,
+      "type": "multiple",
+      "prompt": "Which of these are components of the Transformer architecture?",
+      "choices": [
+        { "id": 1, "text": "Multi-head self-attention mechanisms.", "is_correct": true },
+        { "id": 2, "text": "Convolutional layers for image processing.", "is_correct": false },
+        { "id": 3, "text": "Positional encodings to understand word order.", "is_correct": true },
+        { "id": 4, "text": "Feed-forward neural networks.", "is_correct": true }
+      ],
+      "explanation": "Key components of the Transformer architecture include positional encodings, multi-head self-attention layers, and feed-forward networks, which work together to process sequences."
+    },
+    {
+      "id": 33,
+      "type": "single",
+      "prompt": "When an LLM generates a response, the resulting vectors that summarize what it has understood so far are known as:",
+      "choices": [
+        { "id": 1, "text": "Initial embeddings", "is_correct": false },
+        { "id": 2, "text": "Context representation", "is_correct": true },
+        { "id": 3, "text": "Positional encodings", "is_correct": false },
+        { "id": 4, "text": "Token IDs", "is_correct": false }
+      ],
+      "explanation": "The vectors produced after processing the input through the Transformer layers are the context representation, which captures the model's understanding of the sequence up to that point and is used to predict the next token."
+    },
+    {
+      "id": 34,
+      "type": "single",
+      "prompt": "What is the primary function of the encoder part of a full Transformer model?",
+      "choices": [
+        { "id": 1, "text": "To generate the output sequence token by token.", "is_correct": false },
+        { "id": 2, "text": "To process the input sequence and create a contextual representation.", "is_correct": true },
+        { "id": 3, "text": "To convert tokens into embeddings.", "is_correct": false },
+        { "id": 4, "text": "To apply the final softmax layer for prediction.", "is_correct": false }
+      ],
+      "explanation": "In the original Transformer architecture, the encoder's job is to read and process the entire input sequence to build a rich representation of it, which is then passed to the decoder to generate the output."
+    },
+    {
+      "id": 35,
+      "type": "single",
+      "prompt": "If you ask an LLM to 'Translate this sentence to French, but do not translate the word \"Copilot\"', this is an example of what prompt engineering technique?",
+      "choices": [
+        { "id": 1, "text": "Providing constraints in the prompt.", "is_correct": true },
+        { "id": 2, "text": "Few-shot prompting.", "is_correct": false },
+        { "id": 3, "text": "Zero-shot prompting.", "is_correct": false },
+        { "id": 4, "text": "Grounding.", "is_correct": false }
+      ],
+      "explanation": "A key technique in prompt engineering is to be explicit and provide clear constraints. In this case, 'do not translate the word \"Copilot\"' is a negative constraint that guides the model's output."
+    },
+    {
+      "id": 36,
+      "type": "single",
+      "prompt": "What does scaling in LLMs refer to?",
+      "choices": [
+        { "id": 1, "text": "Deploying the model to more users.", "is_correct": false },
+        { "id": 2, "text": "Increasing the number of parameters and the amount of training data.", "is_correct": true },
+        { "id": 3, "text": "Making the model's responses faster.", "is_correct": false },
+        { "id": 4, "text": "Reducing the size of the model to run on smaller devices.", "is_correct": false }
+      ],
+      "explanation": "Scaling refers to the trend of increasing the size of LLMs (more parameters) and training them on larger datasets, which has been shown to typically increase their capability and generalization performance."
+    },
+    {
+      "id": 37,
+      "type": "single",
+      "prompt": "Emojis, punctuation, and sub-words are all examples of:",
+      "choices": [
+        { "id": 1, "text": "Parameters", "is_correct": false },
+        { "id": 2, "text": "Embeddings", "is_correct": false },
+        { "id": 3, "text": "Tokens", "is_correct": true },
+        { "id": 4, "text": "Activations", "is_correct": false }
+      ],
+      "explanation": "The token vocabulary of an LLM is not just limited to whole words. It also includes sub-words, punctuation, and even emojis, allowing it to handle a wide variety of text inputs."
+    },
+    {
+      "id": 38,
+      "type": "single",
+      "prompt": "A company wants its new chatbot to be able to answer questions about its products using the company's internal documentation. This requires a system that can:",
+      "choices": [
+        { "id": 1, "text": "Retrain the LLM from scratch on the documentation.", "is_correct": false },
+        { "id": 2, "text": "Use grounding (RAG) to retrieve relevant information from the documentation and add it to the prompt.", "is_correct": true },
+        { "id": 3, "text": "Only use the LLM's pre-trained knowledge.", "is_correct": false },
+        { "id": 4, "text": "Use zero-shot prompting exclusively.", "is_correct": false }
+      ],
+      "explanation": "This is a classic use case for grounding, or Retrieval-Augmented Generation (RAG). The system would retrieve relevant sections from the internal documentation and provide them as context to the LLM in the prompt, enabling it to answer questions based on that specific information."
+    },
+    {
+      "id": 39,
+      "type": "single",
+      "prompt": "The 'Attention Is All You Need' paper was significant because it:",
+      "choices": [
+        { "id": 1, "text": "Introduced the first neural network.", "is_correct": false },
+        { "id": 2, "text": "Proved that AI could achieve human-level intelligence.", "is_correct": false },
+        { "id": 3, "text": "Introduced the Transformer architecture, which was more efficient and better at modeling long-range dependencies than previous models.", "is_correct": true },
+        { "id": 4, "text": "Created the first Generative AI model.", "is_correct": false }
+      ],
+      "explanation": "This paper was a breakthrough because it introduced the Transformer architecture. Its self-attention mechanism allowed for more efficient training (via parallelization) and was more effective at capturing relationships between words across long sentences compared to prior RNN-based models."
+    },
+    {
+      "id": 40,
+      "type": "single",
+      "prompt": "When an LLM uses vector embeddings, what does the numerical distance between two word vectors represent?",
+      "choices": [
+        { "id": 1, "text": "The difference in the number of letters in the words.", "is_correct": false },
+        { "id": 2, "text": "The grammatical correctness of the words.", "is_correct": false },
+        { "id": 3, "text": "The semantic similarity between the words.", "is_correct": true },
+        { "id": 4, "text": "The frequency of the words in the training data.", "is_correct": false }
+      ],
+      "explanation": "Embeddings are designed so that the distance in the vector space corresponds to semantic similarity. Words with similar meanings will have vectors that are numerically close, while unrelated words will have vectors that are far apart."
+    }
+  ]
+}

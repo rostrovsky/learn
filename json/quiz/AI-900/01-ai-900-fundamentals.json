@@ -1,0 +1,486 @@
+{
+  "title": "Quiz 1: AI & Machine Learning Fundamentals",
+  "version": 1,
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "prompt": "Which statement best describes the relationship between Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL)?",
+      "choices": [
+        { "id": 1, "text": "AI, ML, and DL are all separate fields with no overlap.", "is_correct": false },
+        { "id": 2, "text": "AI is a subset of ML, which is a subset of DL.", "is_correct": false },
+        { "id": 3, "text": "ML is a subset of AI, and DL is a subset of ML.", "is_correct": true },
+        { "id": 4, "text": "DL and ML are two different approaches to achieving AI.", "is_correct": false }
+      ],
+      "explanation": "Machine Learning (ML) is a subset of AI where systems learn from data. Deep Learning (DL) is a further subset of ML that uses multi-layer neural networks to model complex patterns."
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "prompt": "What is the primary goal of a regression model in machine learning?",
+      "choices": [
+        { "id": 1, "text": "To group similar data points into clusters.", "is_correct": false },
+        { "id": 2, "text": "To predict a discrete category or class label.", "is_correct": false },
+        { "id": 3, "text": "To predict a continuous numeric value.", "is_correct": true },
+        { "id": 4, "text": "To generate new, original content based on inputs.", "is_correct": false }
+      ],
+      "explanation": "Regression is a supervised learning task used to predict a continuous numeric value, such as a house price or temperature."
+    },
+    {
+      "id": 3,
+      "type": "multiple",
+      "prompt": "In a supervised learning problem for predicting whether an email is 'spam' or 'not spam', what are the 'features' and 'labels'?",
+      "choices": [
+        { "id": 1, "text": "Feature: The words and sender information in the email.", "is_correct": true },
+        { "id": 2, "text": "Label: The final prediction algorithm used.", "is_correct": false },
+        { "id": 3, "text": "Label: The designation 'spam' or 'not spam'.", "is_correct": true },
+        { "id": 4, "text": "Feature: The number of emails in the training dataset.", "is_correct": false }
+      ],
+      "explanation": "Features are the input characteristics used for prediction (e.g., email content), while labels are the correct outputs or answers you are trying to predict (e.g., 'spam' or 'not spam')."
+    },
+    {
+      "id": 4,
+      "type": "single",
+      "prompt": "Which type of machine learning discovers patterns in data without pre-existing labels?",
+      "choices": [
+        { "id": 1, "text": "Supervised Learning", "is_correct": false },
+        { "id": 2, "text": "Regression Learning", "is_correct": false },
+        { "id": 3, "text": "Reinforcement Learning", "is_correct": false },
+        { "id": 4, "text": "Unsupervised Learning", "is_correct": true }
+      ],
+      "explanation": "Unsupervised learning is used to find patterns, such as clusters, in unlabeled data where the correct output is not known beforehand."
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "prompt": "What is the artifact produced after the training process in machine learning, which can then be used to make predictions on new data?",
+      "choices": [
+        { "id": 1, "text": "An algorithm", "is_correct": false },
+        { "id": 2, "text": "A dataset", "is_correct": false },
+        { "id": 3, "text": "A model", "is_correct": true },
+        { "id": 4, "text": "A feature", "is_correct": false }
+      ],
+      "explanation": "An ML model is the trained artifact that can make predictions on new, unseen data."
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "prompt": "A model that predicts one of two possible outcomes (e.g., 'yes/no' or 'true/false') is performing what task?",
+      "choices": [
+        { "id": 1, "text": "Multiclass classification", "is_correct": false },
+        { "id": 2, "text": "Binary classification", "is_correct": true },
+        { "id": 3, "text": "Clustering", "is_correct": false },
+        { "id": 4, "text": "Regression", "is_correct": false }
+      ],
+      "explanation": "Binary classification is a supervised learning task that involves predicting one of two possible outcomes, like 'spam/not spam'."
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "prompt": "What is the fundamental component of a neural network that applies an activation function to its inputs?",
+      "choices": [
+        { "id": 1, "text": "A layer", "is_correct": false },
+        { "id": 2, "text": "A weight", "is_correct": false },
+        { "id": 3, "text": "A neuron", "is_correct": true },
+        { "id": 4, "text": "A bias", "is_correct": false }
+      ],
+      "explanation": "Neurons (or units) are the core components of a neural network. They apply nonlinear activation functions to their inputs and pass signals forward."
+    },
+    {
+      "id": 8,
+      "type": "multiple",
+      "prompt": "Which of the following are key characteristics of Deep Learning?",
+      "choices": [
+        { "id": 1, "text": "It uses neural networks with many hidden layers.", "is_correct": true },
+        { "id": 2, "text": "It is a subset of Machine Learning.", "is_correct": true },
+        { "id": 3, "text": "It typically requires small amounts of data and compute power.", "is_correct": false },
+        { "id": 4, "text": "It is primarily used for simple, linear problems.", "is_correct": false }
+      ],
+      "explanation": "Deep Learning is a subset of ML that uses multi-layer neural networks to model complex relationships, often requiring large datasets and significant compute resources."
+    },
+    {
+      "id": 9,
+      "type": "single",
+      "prompt": "In the context of a neural network, what are 'weights' and 'biases'?",
+      "choices": [
+        { "id": 1, "text": "The input data and the final output prediction.", "is_correct": false },
+        { "id": 2, "text": "Trainable parameters that are optimized during the learning process.", "is_correct": true },
+        { "id": 3, "text": "Functions that determine if a neuron should be activated.", "is_correct": false },
+        { "id": 4, "text": "The different layers within the network architecture.", "is_correct": false }
+      ],
+      "explanation": "Weights and biases are the trainable parameters of a neural network. Weights connect neurons between layers, and biases shift activations. Both are optimized during training."
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "prompt": "Azure Machine Learning Studio is a platform primarily used for what purpose?",
+      "choices": [
+        { "id": 1, "text": "To build and manage chatbots.", "is_correct": false },
+        { "id": 2, "text": "To build, train, and deploy custom machine learning models.", "is_correct": true },
+        { "id": 3, "text": "To analyze the sentiment of text documents.", "is_correct": false },
+        { "id": 4, "text": "To host pre-trained OpenAI models like GPT-4.", "is_correct": false }
+      ],
+      "explanation": "Azure Machine Learning Studio is a cloud platform for building, training, deploying, and managing custom ML models, including capabilities for datasets, labeling, and deployment."
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "prompt": "What defines Artificial Intelligence (AI) at a high level?",
+      "choices": [
+        { "id": 1, "text": "A computer system that is self-aware and has consciousness.", "is_correct": false },
+        { "id": 2, "text": "A specific algorithm for sorting data efficiently.", "is_correct": false },
+        { "id": 3, "text": "A computer system that imitates some aspect of human behavior or capability.", "is_correct": true },
+        { "id": 4, "text": "A system that only learns from data without any initial programming.", "is_correct": false }
+      ],
+      "explanation": "AI is broadly defined as a computer system that imitates aspects of human behavior, such as recognizing speech, classifying images, and making decisions."
+    },
+    {
+      "id": 12,
+      "type": "single",
+      "prompt": "You are building a system to categorize customer support tickets into 'Billing', 'Technical', or 'General Inquiry'. This is an example of:",
+      "choices": [
+        { "id": 1, "text": "Regression", "is_correct": false },
+        { "id": 2, "text": "Clustering", "is_correct": false },
+        { "id": 3, "text": "Multiclass classification", "is_correct": true },
+        { "id": 4, "text": "Binary classification", "is_correct": false }
+      ],
+      "explanation": "This task involves predicting a category from more than two possible outcomes, which is known as multiclass classification."
+    },
+    {
+      "id": 13,
+      "type": "single",
+      "prompt": "Which of the following describes the function of an activation function in a neuron?",
+      "choices": [
+        { "id": 1, "text": "It stores the input value for later use.", "is_correct": false },
+        { "id": 2, "text": "It applies a nonlinear transformation to the input signal to decide if the neuron should 'fire'.", "is_correct": true },
+        { "id": 3, "text": "It calculates the total number of neurons in a layer.", "is_correct": false },
+        { "id": 4, "text": "It adjusts the learning rate of the model during training.", "is_correct": false }
+      ],
+      "explanation": "Activation functions are applied by neurons to their inputs. They introduce nonlinearity, allowing the network to model complex relationships and decide whether to pass a signal forward."
+    },
+    {
+      "id": 14,
+      "type": "multiple",
+      "prompt": "Select the statements that correctly describe supervised machine learning.",
+      "choices": [
+        { "id": 1, "text": "It requires training data that includes both inputs (features) and correct outputs (labels).", "is_correct": true },
+        { "id": 2, "text": "Its primary goal is to find hidden structures in unlabeled data.", "is_correct": false },
+        { "id": 3, "text": "Regression and classification are two common types of supervised learning tasks.", "is_correct": true },
+        { "id": 4, "text": "It is a subset of unsupervised learning.", "is_correct": false }
+      ],
+      "explanation": "Supervised learning uses labeled data (features and labels) to train models for tasks like regression (predicting numbers) and classification (predicting categories)."
+    },
+    {
+      "id": 15,
+      "type": "single",
+      "prompt": "The process of refining an ML model by testing it and tuning its parameters to improve performance is described as:",
+      "choices": [
+        { "id": 1, "text": "Iterative", "is_correct": true },
+        { "id": 2, "text": "Static", "is_correct": false },
+        { "id": 3, "text": "Unsupervised", "is_correct": false },
+        { "id": 4, "text": "Generative", "is_correct": false }
+      ],
+      "explanation": "ML training is an iterative process where models are repeatedly evaluated and their parameters are tuned to improve performance on validation or test data."
+    },
+    {
+      "id": 16,
+      "type": "single",
+      "prompt": "An e-commerce company wants to group its customers into different market segments based on their purchasing behavior, without any predefined segments. Which ML approach is most suitable?",
+      "choices": [
+        { "id": 1, "text": "Regression", "is_correct": false },
+        { "id": 2, "text": "Classification", "is_correct": false },
+        { "id": 3, "text": "Clustering", "is_correct": true },
+        { "id": 4, "text": "Generative AI", "is_correct": false }
+      ],
+      "explanation": "Clustering is an unsupervised learning technique used to find natural groupings or segments in unlabeled data, such as customer purchasing behavior."
+    },
+    {
+      "id": 17,
+      "type": "single",
+      "prompt": "What is the primary characteristic that distinguishes 'regular AI' from 'Generative AI'?",
+      "choices": [
+        { "id": 1, "text": "Regular AI uses neural networks, while Generative AI does not.", "is_correct": false },
+        { "id": 2, "text": "Regular AI imitates or predicts, while Generative AI creates original content.", "is_correct": true },
+        { "id": 3, "text": "Regular AI is supervised, while Generative AI is unsupervised.", "is_correct": false },
+        { "id": 4, "text": "Regular AI is an older term for what is now called Generative AI.", "is_correct": false }
+      ],
+      "explanation": "The key difference is that regular AI typically imitates specific human behaviors like classification or prediction, whereas Generative AI focuses on creating new, original content like text, images, or code."
+    },
+    {
+      "id": 18,
+      "type": "single",
+      "prompt": "Which component of a neural network architecture is responsible for receiving the initial data?",
+      "choices": [
+        { "id": 1, "text": "Output Layer", "is_correct": false },
+        { "id": 2, "text": "Hidden Layer", "is_correct": false },
+        { "id": 3, "text": "Activation Function", "is_correct": false },
+        { "id": 4, "text": "Input Layer", "is_correct": true }
+      ],
+      "explanation": "A neural network is composed of layers. The input layer is the first layer that receives the initial raw data or features."
+    },
+    {
+      "id": 19,
+      "type": "multiple",
+      "prompt": "Which of the following are examples of AI capabilities, as defined in the provided material?",
+      "choices": [
+        { "id": 1, "text": "Translating text from one language to another.", "is_correct": true },
+        { "id": 2, "text": "Storing files in a cloud database.", "is_correct": false },
+        { "id": 3, "text": "Classifying an image as containing a cat or a dog.", "is_correct": true },
+        { "id": 4, "text": "Predicting the future stock price of a company.", "is_correct": true }
+      ],
+      "explanation": "AI is defined as the ability of computers to imitate human behaviors, which includes translation, image classification, and making predictions."
+    },
+    {
+      "id": 20,
+      "type": "single",
+      "prompt": "What is the general reason that deep learning models with more parameters often perform better?",
+      "choices": [
+        { "id": 1, "text": "They train faster than models with fewer parameters.", "is_correct": false },
+        { "id": 2, "text": "They can capture richer, more complex patterns in the data.", "is_correct": true },
+        { "id": 3, "text": "They require less training data to achieve high accuracy.", "is_correct": false },
+        { "id": 4, "text": "They are guaranteed to avoid bias and errors.", "is_correct": false }
+      ],
+      "explanation": "Models with more parameters have a greater capacity to capture and represent complex patterns and nuances within the training data, leading to better performance, assuming sufficient data and compute are available."
+    },
+    {
+      "id": 21,
+      "type": "single",
+      "prompt": "The 'softmax' function is typically used in which part of a neural network for a classification task?",
+      "choices": [
+        { "id": 1, "text": "The input layer, to normalize the feature values.", "is_correct": false },
+        { "id": 2, "text": "The hidden layers, as a standard activation function.", "is_correct": false },
+        { "id": 3, "text": "The output layer, to convert raw scores into probabilities.", "is_correct": true },
+        { "id": 4, "text": "It is not part of a neural network, but a separate algorithm.", "is_correct": false }
+      ],
+      "explanation": "The softmax function is commonly used in the output layer of a classification network to convert the raw output scores (logits) into a probability distribution over the possible classes."
+    },
+    {
+      "id": 22,
+      "type": "single",
+      "prompt": "What does it mean for an AI to be 'multimodal'?",
+      "choices": [
+        { "id": 1, "text": "It can be deployed on multiple cloud platforms.", "is_correct": false },
+        { "id": 2, "text": "It was trained by multiple development teams.", "is_correct": false },
+        { "id": 3, "text": "It can understand and process multiple types of data, such as text, images, and audio.", "is_correct": true },
+        { "id": 4, "text": "It produces multiple possible outputs for a single input.", "is_correct": false }
+      ],
+      "explanation": "Multimodal AI refers to systems that can process and interact with multiple data types or modalities, like text, images, audio, and video. GPT-4o is an example of a multimodal model."
+    },
+    {
+      "id": 23,
+      "type": "single",
+      "prompt": "Which of these is the best example of a feature in a machine learning model that predicts house prices?",
+      "choices": [
+        { "id": 1, "text": "The final predicted price of the house.", "is_correct": false },
+        { "id": 2, "text": "The square footage of the house.", "is_correct": true },
+        { "id": 3, "text": "The name of the real estate agent.", "is_correct": false },
+        { "id": 4, "text": "The accuracy of the model.", "is_correct": false }
+      ],
+      "explanation": "Features are the input variables or characteristics used by a model to make a prediction. In this case, square footage is a key input characteristic for predicting a house's price."
+    },
+    {
+      "id": 24,
+      "type": "single",
+      "prompt": "If you use a dataset of customer reviews to train a model that assigns a sentiment score from -1 (very negative) to +1 (very positive), what kind of ML task is this?",
+      "choices": [
+        { "id": 1, "text": "Regression", "is_correct": true },
+        { "id": 2, "text": "Clustering", "is_correct": false },
+        { "id": 3, "text": "Binary Classification", "is_correct": false },
+        { "id": 4, "text": "Unsupervised Learning", "is_correct": false }
+      ],
+      "explanation": "Since the sentiment score is a continuous numeric value within a range, this is a regression task. If it were just 'positive' or 'negative' categories, it would be classification."
+    },
+    {
+      "id": 25,
+      "type": "single",
+      "prompt": "What is the core idea of Machine Learning (ML)?",
+      "choices": [
+        { "id": 1, "text": "Writing explicit step-by-step instructions for a computer to follow.", "is_correct": false },
+        { "id": 2, "text": "Having systems learn patterns from data to make predictions without explicit programming.", "is_correct": true },
+        { "id": 3, "text": "Creating computer systems that can perfectly replicate human consciousness.", "is_correct": false },
+        { "id": 4, "text": "Building hardware that is optimized for artificial intelligence tasks.", "is_correct": false }
+      ],
+      "explanation": "Machine Learning is a subset of AI where systems learn from past data to build models that make future predictions, without being explicitly programmed for every scenario."
+    },
+    {
+      "id": 26,
+      "type": "multiple",
+      "prompt": "Which of the following are components of the typical ML workflow?",
+      "choices": [
+        { "id": 1, "text": "Training a model on a training dataset.", "is_correct": true },
+        { "id": 2, "text": "Writing the application's user interface from scratch.", "is_correct": false },
+        { "id": 3, "text": "Evaluating the model's performance on test data.", "is_correct": true },
+        { "id": 4, "text": "Deploying the model once its performance is acceptable.", "is_correct": true }
+      ],
+      "explanation": "A typical ML workflow involves training on training data, evaluating on test/validation data to check performance, tuning parameters, and finally deploying the model for use."
+    },
+    {
+      "id": 27,
+      "type": "single",
+      "prompt": "The layers in a neural network that are located between the input and output layers are known as:",
+      "choices": [
+        { "id": 1, "text": "Processing Layers", "is_correct": false },
+        { "id": 2, "text": "Hidden Layers", "is_correct": true },
+        { "id": 3, "text": "Middle Layers", "is_correct": false },
+        { "id": 4, "text": "Connection Layers", "is_correct": false }
+      ],
+      "explanation": "The layers responsible for processing between the input and output are called hidden layers. Deep learning networks are characterized by having many hidden layers."
+    },
+    {
+      "id": 28,
+      "type": "single",
+      "prompt": "What is the primary function of the 'training data' in machine learning?",
+      "choices": [
+        { "id": 1, "text": "To provide a final, definitive test of the model's accuracy before deployment.", "is_correct": false },
+        { "id": 2, "text": "To give the model examples from which it can learn the mapping from inputs to outputs.", "is_correct": true },
+        { "id": 3, "text": "To define the network architecture of a deep learning model.", "is_correct": false },
+        { "id": 4, "text": "To be the data that the deployed model will make predictions on.", "is_correct": false }
+      ],
+      "explanation": "Training data, which consists of labeled examples (features and labels), is used to teach the model the relationship between inputs and outputs."
+    },
+    {
+      "id": 29,
+      "type": "single",
+      "prompt": "An ML algorithm like a decision tree or linear regression is a:",
+      "choices": [
+        { "id": 1, "text": "Procedure that learns relationships between features and labels.", "is_correct": true },
+        { "id": 2, "text": "Trained artifact ready to make predictions.", "is_correct": false },
+        { "id": 3, "text": "Type of input data for a model.", "is_correct": false },
+        { "id": 4, "text": "Hardware accelerator for training.", "is_correct": false }
+      ],
+      "explanation": "An ML algorithm is the procedure or method (e.g., decision trees, linear regression) that a system uses to learn the patterns and relationships from the training data."
+    },
+    {
+      "id": 30,
+      "type": "single",
+      "prompt": "Deploying a custom ML model in a container on Azure Kubernetes Service (AKS) is a capability provided by which Azure service?",
+      "choices": [
+        { "id": 1, "text": "Azure OpenAI Service", "is_correct": false },
+        { "id": 2, "text": "Azure AI Search", "is_correct": false },
+        { "id": 3, "text": "Azure Machine Learning", "is_correct": true },
+        { "id": 4, "text": "Azure Bot Service", "is_correct": false }
+      ],
+      "explanation": "Azure Machine Learning provides comprehensive capabilities for the entire ML lifecycle, including the containerized deployment of custom models to services like Azure Container Instances (ACI) or Azure Kubernetes Service (AKS)."
+    },
+    {
+      "id": 31,
+      "type": "single",
+      "prompt": "The term 'label' in machine learning refers to:",
+      "choices": [
+        { "id": 1, "text": "The input variable describing an example.", "is_correct": false },
+        { "id": 2, "text": "The correct answer or target output for a training example.", "is_correct": true },
+        { "id": 3, "text": "A tag used for organizing datasets in Azure.", "is_correct": false },
+        { "id": 4, "text": "The name of the machine learning model.", "is_correct": false }
+      ],
+      "explanation": "A label is the correct output or 'answer' that is associated with a set of input features in a supervised learning training dataset."
+    },
+    {
+      "id": 32,
+      "type": "single",
+      "prompt": "What kind of problem is a model solving if it predicts whether a financial transaction is 'fraudulent' or 'legitimate'?",
+      "choices": [
+        { "id": 1, "text": "Regression", "is_correct": false },
+        { "id": 2, "text": "Binary Classification", "is_correct": true },
+        { "id": 3, "text": "Clustering", "is_correct": false },
+        { "id": 4, "text": "Multiclass Classification", "is_correct": false }
+      ],
+      "explanation": "Since there are exactly two mutually exclusive outcomes ('fraudulent' or 'legitimate'), this is a binary classification problem."
+    },
+    {
+      "id": 33,
+      "type": "multiple",
+      "prompt": "Which statements are true about the computational requirements of deep learning?",
+      "choices": [
+        { "id": 1, "text": "Training large models can require months and thousands of powerful GPUs.", "is_correct": true },
+        { "id": 2, "text": "It is generally less computationally intensive than traditional ML algorithms.", "is_correct": false },
+        { "id": 3, "text": "Training deep networks often requires large datasets and heavy compute.", "is_correct": true },
+        { "id": 4, "text": "Inference is always more computationally expensive than training.", "is_correct": false }
+      ],
+      "explanation": "Deep learning is known for being computationally intensive, especially the training phase, which requires large datasets and substantial compute power, often from GPUs, over long durations."
+    },
+    {
+      "id": 34,
+      "type": "single",
+      "prompt": "A company wants to analyze its product reviews to automatically group them by common themes (e.g., 'shipping issues', 'product quality', 'customer service') without manually creating these themes first. This is a task for:",
+      "choices": [
+        { "id": 1, "text": "Supervised learning", "is_correct": false },
+        { "id": 2, "text": "Regression", "is_correct": false },
+        { "id": 3, "text": "Unsupervised learning (clustering)", "is_correct": true },
+        { "id": 4, "text": "Classification", "is_correct": false }
+      ],
+      "explanation": "Because the themes (groups) are not predefined, the goal is to discover them directly from the data. This is a classic use case for unsupervised learning, specifically clustering."
+    },
+    {
+      "id": 35,
+      "type": "single",
+      "prompt": "Which of the following best defines a 'neural network'?",
+      "choices": [
+        { "id": 1, "text": "A biological model of the human brain.", "is_correct": false },
+        { "id": 2, "text": "A network of interconnected units (neurons) that transform inputs through layers using weighted connections.", "is_correct": true },
+        { "id": 3, "text": "A type of database optimized for storing AI data.", "is_correct": false },
+        { "id": 4, "text": "A flowchart that explicitly programs a computer's decisions.", "is_correct": false }
+      ],
+      "explanation": "A neural network is a computational model inspired by the brain, consisting of layers of connected neurons. These connections have weights that are learned during training to transform input data into a desired output."
+    },
+    {
+      "id": 36,
+      "type": "single",
+      "prompt": "The entire set of trainable weights and biases in a deep learning model are collectively known as its:",
+      "choices": [
+        { "id": 1, "text": "Algorithm", "is_correct": false },
+        { "id": 2, "text": "Parameters", "is_correct": true },
+        { "id": 3, "text": "Features", "is_correct": false },
+        { "id": 4, "text": "Architecture", "is_correct": false }
+      ],
+      "explanation": "All the trainable values in a model, which are learned from data during training, are called parameters. This includes the weights on the connections and the biases in the neurons."
+    },
+    {
+      "id": 37,
+      "type": "single",
+      "prompt": "The process of using a reserved portion of your labeled data to check the performance of your model during the training phase is called:",
+      "choices": [
+        { "id": 1, "text": "Inference", "is_correct": false },
+        { "id": 2, "text": "Deployment", "is_correct": false },
+        { "id": 3, "text": "Evaluation or validation", "is_correct": true },
+        { "id": 4, "text": "Labeling", "is_correct": false }
+      ],
+      "explanation": "The ML workflow involves training on a training set and then evaluating the model's performance on a separate test or validation set to see how well it generalizes to unseen data."
+    },
+    {
+      "id": 38,
+      "type": "single",
+      "prompt": "Which of these tasks is a classification problem, not a regression problem?",
+      "choices": [
+        { "id": 1, "text": "Predicting the temperature for tomorrow.", "is_correct": false },
+        { "id": 2, "text": "Predicting the age of a person from a photo.", "is_correct": false },
+        { "id": 3, "text": "Predicting if a plant belongs to one of three different species.", "is_correct": true },
+        { "id": 4, "text": "Predicting the number of sales a store will have next month.", "is_correct": false }
+      ],
+      "explanation": "Predicting a category or class (like a plant species) from a discrete set of possibilities is a classification task. The other options involve predicting a continuous numeric value, which is regression."
+    },
+    {
+      "id": 39,
+      "type": "single",
+      "prompt": "The main benefit of introducing nonlinearity through activation functions in a neural network is:",
+      "choices": [
+        { "id": 1, "text": "To allow the network to model complex relationships and decision boundaries.", "is_correct": true },
+        { "id": 2, "text": "To decrease the amount of memory the model requires.", "is_correct": false },
+        { "id": 3, "text": "To ensure the output is always a positive number.", "is_correct": false },
+        { "id": 4, "text": "To speed up the initial data loading process.", "is_correct": false }
+      ],
+      "explanation": "Without nonlinear activation functions, a deep neural network, no matter how many layers it has, would behave like a single-layer linear model. Nonlinearity is what enables it to learn and represent complex patterns."
+    },
+    {
+      "id": 40,
+      "type": "single",
+      "prompt": "What capability of Azure Machine Learning Studio helps users prepare data for supervised learning tasks?",
+      "choices": [
+        { "id": 1, "text": "Automated deployment to web servers.", "is_correct": false },
+        { "id": 2, "text": "Data labeling tools.", "is_correct": true },
+        { "id": 3, "text": "Real-time performance monitoring.", "is_correct": false },
+        { "id": 4, "text": "A chatbot interface for model training.", "is_correct": false }
+      ],
+      "explanation": "Azure Machine Learning Studio includes tools for data labeling, which is the process of adding the correct labels (answers) to raw data to create a labeled dataset suitable for training supervised models."
+    }
+  ]
+}

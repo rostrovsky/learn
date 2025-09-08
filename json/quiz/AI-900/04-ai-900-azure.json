@@ -1,0 +1,486 @@
+{
+  "title": "Quiz 4: Azure AI Services Deep Dive",
+  "version": 1,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple",
+      "prompt": "Which of the following capabilities are offered by the Azure AI Image Analysis service (v4.0)?",
+      "choices": [
+        { "id": 1, "text": "Generating image captions and descriptive tags.", "is_correct": true },
+        { "id": 2, "text": "Detecting objects and providing their bounding box coordinates.", "is_correct": true },
+        { "id": 3, "text": "Performing small-scale Optical Character Recognition (OCR).", "is_correct": true },
+        { "id": 4, "text": "Detecting human emotions and gender from a facial image.", "is_correct": false }
+      ],
+      "explanation": "Azure AI Image Analysis provides captions, tags, object detection, background removal, and OCR. The Face service, which is separate, no longer supports emotion or gender detection."
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "prompt": "What is the primary purpose of the Azure AI Language Understanding (LUIS) service?",
+      "choices": [
+        { "id": 1, "text": "To translate text between multiple languages.", "is_correct": false },
+        { "id": 2, "text": "To extract key phrases and determine the sentiment of a block of text.", "is_correct": false },
+        { "id": 3, "text": "To extract user intents and entities from natural language utterances.", "is_correct": true },
+        { "id": 4, "text": "To build a knowledge base of question-and-answer pairs.", "is_correct": false }
+      ],
+      "explanation": "LUIS is designed to interpret a user's goal (intent) and extract important pieces of information (entities) from their text. For example, in 'turn on the lights', the intent is 'turn on' and the entity is 'lights'."
+    },
+    {
+      "id": 3,
+      "type": "single",
+      "prompt": "Azure AI Document Intelligence is a service specialized for what task?",
+      "choices": [
+        { "id": 1, "text": "Searching for keywords across a collection of documents.", "is_correct": false },
+        { "id": 2, "text": "Translating entire documents from one language to another.", "is_correct": false },
+        { "id": 3, "text": "Extracting structured data (like tables and key-value pairs) from forms, receipts, and invoices.", "is_correct": true },
+        { "id": 4, "text": "Detecting plagiarism by comparing documents.", "is_correct": false }
+      ],
+      "explanation": "Document Intelligence (formerly Forms Recognizer) excels at analyzing documents to extract structured information, turning unstructured or semi-structured data from forms and receipts into usable JSON output."
+    },
+    {
+      "id": 4,
+      "type": "multiple",
+      "prompt": "Which functionalities are part of the Azure AI Speech services?",
+      "choices": [
+        { "id": 1, "text": "Converting text into lifelike speech (Text-to-Speech).", "is_correct": true },
+        { "id": 2, "text": "Transcribing spoken audio into written text (Speech-to-Text).", "is_correct": true },
+        { "id": 3, "text": "Translating spoken audio from one language to another.", "is_correct": true },
+        { "id": 4, "text": "Identifying the emotional state of the speaker.", "is_correct": false }
+      ],
+      "explanation": "The Azure AI Speech service provides a comprehensive suite of capabilities, including Text-to-Speech, Speech-to-Text, and Speech Translation."
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "prompt": "What is the core purpose of Azure AI Search?",
+      "choices": [
+        { "id": 1, "text": "To provide a simple web search engine like Bing.", "is_correct": false },
+        { "id": 2, "text": "To enable knowledge mining by making large, private datasets searchable through AI-enriched indexes.", "is_correct": true },
+        { "id": 3, "text": "To search for and deploy AI models from a marketplace.", "is_correct": false },
+        { "id": 4, "text": "To monitor and search through application logs for errors.", "is_correct": false }
+      ],
+      "explanation": "Azure AI Search is a knowledge mining service. It ingests data from various sources and uses AI skillsets to enrich and create searchable indexes, which is foundational for building enterprise search and RAG applications."
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "prompt": "When building a chatbot with Azure, which service provides the framework for building, publishing, and managing the bot across different channels (like Teams or web chat)?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Language Service", "is_correct": false },
+        { "id": 2, "text": "Azure OpenAI Service", "is_correct": false },
+        { "id": 3, "text": "Azure Bot Service", "is_correct": true },
+        { "id": 4, "text": "Azure AI Search", "is_correct": false }
+      ],
+      "explanation": "The Azure Bot Service provides the core framework for developing and managing chatbots, handling the connections to various channels so you can focus on the bot's logic."
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "prompt": "What is 'hybrid search' in Azure AI Search?",
+      "choices": [
+        { "id": 1, "text": "A search that runs both on-premises and in the cloud.", "is_correct": false },
+        { "id": 2, "text": "A search that combines traditional keyword-based results with vector-based semantic results.", "is_correct": true },
+        { "id": 3, "text": "A search that can query both text and image data simultaneously.", "is_correct": false },
+        { "id": 4, "text": "A search that is performed by a combination of human and AI agents.", "is_correct": false }
+      ],
+      "explanation": "Hybrid search combines the strengths of lexical (keyword) search and vector (semantic) search. This approach often yields more relevant results than either method alone and can be further improved with semantic ranking."
+    },
+    {
+      "id": 8,
+      "type": "multiple",
+      "prompt": "The Azure AI Language service can perform which of the following Natural Language Processing (NLP) tasks?",
+      "choices": [
+        { "id": 1, "text": "Detecting the language of a given text.", "is_correct": true },
+        { "id": 2, "text": "Analyzing text to determine if the sentiment is positive, negative, or neutral.", "is_correct": true },
+        { "id": 3, "text": "Extracting key phrases and recognizing named entities (like people, places, organizations).", "is_correct": true },
+        { "id": 4, "text": "Generating a 3D model from a text description.", "is_correct": false }
+      ],
+      "explanation": "The Azure AI Language service is a suite of NLP capabilities that includes language detection, sentiment analysis, key phrase extraction, and named entity recognition (NER)."
+    },
+    {
+      "id": 9,
+      "type": "single",
+      "prompt": "A key feature of the Azure AI Face service is 'liveness detection'. What does this feature do?",
+      "choices": [
+        { "id": 1, "text": "It determines if the person in the photo is happy or sad.", "is_correct": false },
+        { "id": 2, "text": "It checks if the face presented to the camera is from a real, live person rather than a photo or mask.", "is_correct": true },
+        { "id": 3, "text": "It measures the heart rate of the person by analyzing their face.", "is_correct": false },
+        { "id": 4, "text": "It predicts the age of the person in the image.", "is_correct": false }
+      ],
+      "explanation": "Liveness detection is a crucial anti-spoofing feature that verifies a user is physically present, helping to prevent attacks where someone might try to use a photograph or mask to impersonate another person."
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "prompt": "How can you train a custom model with Azure AI Document Intelligence for a unique document type?",
+      "choices": [
+        { "id": 1, "text": "You must write a complex Python script and provide thousands of examples.", "is_correct": false },
+        { "id": 2, "text": "It is not possible; you can only use the pre-built models.", "is_correct": false },
+        { "id": 3, "text": "You can use a no-code studio to label and train a model with as few as five example documents.", "is_correct": true },
+        { "id": 4, "text": "You must submit a request to Microsoft to build the model for you.", "is_correct": false }
+      ],
+      "explanation": "Azure Document Intelligence offers a powerful 'few-shot' custom model training capability. Users can leverage a graphical studio to label just a handful of sample documents to create a model tailored to their specific needs."
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "prompt": "What is a key difference in training requirements between the newer Image Analysis v4.0 custom models and the older Custom Vision service?",
+      "choices": [
+        { "id": 1, "text": "The newer models require significantly more images to train effectively.", "is_correct": false },
+        { "id": 2, "text": "The newer Transformer-based models can work well with fewer training images (e.g., 2-5 to start).", "is_correct": true },
+        { "id": 3, "text": "The older service was free, while the new one is not.", "is_correct": false },
+        { "id": 4, "text": "The newer models can only do classification, not object detection.", "is_correct": false }
+      ],
+      "explanation": "The newer custom vision capabilities in Image Analysis v4.0 are based on Transformer models and can achieve good results with far fewer training images compared to the older CNN-based Custom Vision service, which often required more data."
+    },
+    {
+      "id": 12,
+      "type": "single",
+      "prompt": "Which Azure AI service would you use to build a knowledge base from existing FAQ documents to power a chatbot's responses?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Translator", "is_correct": false },
+        { "id": 2, "text": "Azure AI Language (Question Answering)", "is_correct": true },
+        { "id": 3, "text": "Azure AI Face", "is_correct": false },
+        { "id": 4, "text": "Azure AI Document Intelligence", "is_correct": false }
+      ],
+      "explanation": "The Question Answering feature (formerly Q&A Maker), part of the Azure AI Language service, is designed specifically for creating a searchable knowledge base from existing content like FAQs, which can then be easily integrated with a bot."
+    },
+    {
+      "id": 13,
+      "type": "multiple",
+      "prompt": "An 'AI skillset' in Azure AI Search can perform which of the following enrichment steps during data ingestion?",
+      "choices": [
+        { "id": 1, "text": "Breaking large documents into smaller, manageable chunks.", "is_correct": true },
+        { "id": 2, "text": "Performing OCR on images or embedded PDFs to extract text.", "is_correct": true },
+        { "id": 3, "text": "Calling other Azure AI services (like Language or Vision) to extract entities or generate image captions.", "is_correct": true },
+        { "id": 4, "text": "Deploying the search index as a mobile application.", "is_correct": false }
+      ],
+      "explanation": "AI skillsets are a key feature of the Azure AI Search ingestion pipeline. They allow you to attach a series of AI-powered enrichment steps, such as chunking, OCR, and calling other services to extract more metadata before the data is indexed."
+    },
+    {
+      "id": 14,
+      "type": "single",
+      "prompt": "The Azure AI Translator service offers a 'selective translation' feature. What does it do?",
+      "choices": [
+        { "id": 1, "text": "It only translates text for select, pre-approved users.", "is_correct": false },
+        { "id": 2, "text": "It allows you to preserve specific words or terms from being translated.", "is_correct": true },
+        { "id": 3, "text": "It translates only a random sample of the document to save costs.", "is_correct": false },
+        { "id": 4, "text": "It selects the best translation from multiple AI models.", "is_correct": false }
+      ],
+      "explanation": "Selective translation is a feature that lets you mark certain words or phrases (like brand names or technical terms) to ensure they are not altered during the translation process."
+    },
+    {
+      "id": 15,
+      "type": "single",
+      "prompt": "When should you choose a 'Multi-Service Account' for Azure AI Services instead of single-service resources?",
+      "choices": [
+        { "id": 1, "text": "When you need to use the free tier for testing.", "is_correct": false },
+        { "id": 2, "text": "When you want to consolidate billing and access for multiple AI services under a single key and endpoint.", "is_correct": true },
+        { "id": 3, "text": "When you only need to use one specific service, like Speech.", "is_correct": false },
+        { "id": 4, "text": "When you need to use Azure OpenAI or Azure AI Search.", "is_correct": false }
+      ],
+      "explanation": "A multi-service account simplifies management by providing one key and endpoint for most of the AI services. However, it does not have a free tier, and specialized services like Azure OpenAI and Azure AI Search must always be created as separate resources."
+    },
+    {
+      "id": 16,
+      "type": "multiple",
+      "prompt": "What methods can be used to authenticate requests to Azure AI Services endpoints?",
+      "choices": [
+        { "id": 1, "text": "Using a subscription key provided by the service.", "is_correct": true },
+        { "id": 2, "text": "Using a username and password for your personal Microsoft account.", "is_correct": false },
+        { "id": 3, "text": "Using an authentication token from Microsoft Entra ID (formerly Azure AD).", "is_correct": true },
+        { "id": 4, "text": "Using managed identities for Azure resources.", "is_correct": true }
+      ],
+      "explanation": "Authentication can be handled via subscription keys (which should be stored securely, e.g., in Azure Key Vault) or through Microsoft Entra ID using security principals like managed identities, which is the recommended approach for better security and management."
+    },
+    {
+      "id": 17,
+      "type": "single",
+      "prompt": "Which of the following is NOT a capability of the Azure AI Face service?",
+      "choices": [
+        { "id": 1, "text": "Face detection and landmark identification.", "is_correct": false },
+        { "id": 2, "text": "Identification and verification of faces against a trusted set.", "is_correct": false },
+        { "id": 3, "text": "Emotion and gender recognition.", "is_correct": true },
+        { "id": 4, "text": "Detection of masks, glasses, and head pose.", "is_correct": false }
+      ],
+      "explanation": "In line with Responsible AI principles, Microsoft has retired the emotion and gender recognition features from the Azure AI Face service. It still provides detection, identification, verification, and attribute detection like masks and pose."
+    },
+    {
+      "id": 18,
+      "type": "single",
+      "prompt": "What is the primary benefit of using 'semantic ranking' in Azure AI Search?",
+      "choices": [
+        { "id": 1, "text": "It makes the search query run faster.", "is_correct": false },
+        { "id": 2, "text": "It reranks the top results from a combined search using a deep learning model to improve relevance based on meaning.", "is_correct": true },
+        { "id": 3, "text": "It encrypts the search results for better security.", "is_correct": false },
+        { "id": 4, "text": "It only returns results that exactly match the keywords.", "is_correct": false }
+      ],
+      "explanation": "Semantic ranking is an advanced feature that uses deep learning models to understand the semantic meaning of the query and the search results. It reranks the initial result set to push the most contextually relevant answers to the top."
+    },
+    {
+      "id": 19,
+      "type": "single",
+      "prompt": "If you want to create an application that reads a menu in a foreign language through your phone's camera and shows you the translated text, which two Azure AI services would be most essential?",
+      "choices": [
+        { "id": 1, "text": "Face and Bot Service", "is_correct": false },
+        { "id": 2, "text": "Image Analysis (for OCR) and Translator", "is_correct": true },
+        { "id": 3, "text": "Speech and Document Intelligence", "is_correct": false },
+        { "id": 4, "text": "AI Search and Language Understanding (LUIS)", "is_correct": false }
+      ],
+      "explanation": "This task requires two main steps: first, extracting the text from the image of the menu using Optical Character Recognition (OCR), which is a feature of Azure AI Image Analysis; and second, translating that extracted text, which is the job of the Azure AI Translator service."
+    },
+    {
+      "id": 20,
+      "type": "single",
+      "prompt": "What is the role of the Semantic Kernel in building advanced AI applications on Azure?",
+      "choices": [
+        { "id": 1, "text": "It is the underlying operating system for Azure VMs.", "is_correct": false },
+        { "id": 2, "text": "It is an orchestration framework that connects tools and data sources to build grounded meta-prompts for LLMs.", "is_correct": true },
+        { "id": 3, "text": "It is a hardware accelerator for training AI models.", "is_correct": false },
+        { "id": 4, "text": "It is the user interface for Azure AI Studio.", "is_correct": false }
+      ],
+      "explanation": "The Semantic Kernel is an open-source SDK that acts as an orchestrator. It helps developers connect LLMs to other services and data sources (like Azure AI Search or a database) to create grounded, context-aware prompts for more accurate and powerful applications."
+    },
+    {
+      "id": 21,
+      "type": "single",
+      "prompt": "A company has thousands of scanned PDF invoices and wants to automate data entry into their accounting system. Which Azure AI service is best suited for this?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Language Service", "is_correct": false },
+        { "id": 2, "text": "Azure AI Document Intelligence", "is_correct": true },
+        { "id": 3, "text": "Azure AI Image Analysis", "is_correct": false },
+        { "id": 4, "text": "Azure AI Search", "is_correct": false }
+      ],
+      "explanation": "Azure AI Document Intelligence is specifically designed for this purpose. It has pre-built models for invoices that can extract key fields like vendor name, invoice total, and line items, providing a structured JSON output perfect for automation."
+    },
+    {
+      "id": 22,
+      "type": "single",
+      "prompt": "What is 'semantic understanding' in the context of Document Intelligence?",
+      "choices": [
+        { "id": 1, "text": "Understanding the programming language used in the document.", "is_correct": false },
+        { "id": 2, "text": "Going beyond basic OCR to interpret the meaning of fields, like knowing an address has a street, city, and zip code.", "is_correct": true },
+        { "id": 3, "text": "Analyzing the overall positive or negative sentiment of the document.", "is_correct": false },
+        { "id": 4, "text": "Translating the document into another language.", "is_correct": false }
+      ],
+      "explanation": "Document Intelligence doesn't just read text (OCR); it understands the semantic context of the fields it extracts. For example, it can identify a complete address block or parse the line items on an invoice."
+    },
+    {
+      "id": 23,
+      "type": "single",
+      "prompt": "If you want to generate a lifelike voice to read articles aloud from your website, which Azure AI Speech feature would you use?",
+      "choices": [
+        { "id": 1, "text": "Speech-to-Text", "is_correct": false },
+        { "id": 2, "text": "Speech Translation", "is_correct": false },
+        { "id": 3, "text": "Text-to-Speech", "is_correct": true },
+        { "id": 4, "text": "Language Recognition", "is_correct": false }
+      ],
+      "explanation": "Text-to-Speech (TTS) is the feature that synthesizes audio from text input, allowing you to convert written content into spoken words."
+    },
+    {
+      "id": 24,
+      "type": "single",
+      "prompt": "What is a major advantage of using vector search in Azure AI Search over traditional keyword search?",
+      "choices": [
+        { "id": 1, "text": "It is always faster and cheaper than keyword search.", "is_correct": false },
+        { "id": 2, "text": "It finds results based on semantic meaning and conceptual similarity, not just exact keyword matches.", "is_correct": true },
+        { "id": 3, "text": "It only works on numerical data, not text.", "is_correct": false },
+        { "id": 4, "text": "It does not require an index, making it easier to set up.", "is_correct": false }
+      ],
+      "explanation": "Vector search uses embeddings to find results that are semantically related to the query, even if they don't share the same keywords. This is crucial for answering natural language questions where the user's phrasing may not match the document's text exactly."
+    },
+    {
+      "id": 25,
+      "type": "single",
+      "prompt": "Which two Azure AI services are always deployed as separate, specialized resource types and are NOT included in the multi-service account?",
+      "choices": [
+        { "id": 1, "text": "Speech and Language", "is_correct": false },
+        { "id": 2, "text": "Vision and Face", "is_correct": false },
+        { "id": 3, "text": "Azure OpenAI and Azure AI Search", "is_correct": true },
+        { "id": 4, "text": "Translator and Bot Service", "is_correct": false }
+      ],
+      "explanation": "While many AI services can be bundled in a multi-service account, Azure OpenAI Service and Azure AI Search are more complex, specialized services that must always be provisioned as their own distinct resource types in Azure."
+    },
+    {
+      "id": 26,
+      "type": "single",
+      "prompt": "A retail app wants to identify specific products in photos uploaded by users. The list of products is unique to the company. What is the best approach using Azure AI Vision services?",
+      "choices": [
+        { "id": 1, "text": "Use the standard object detection model, which knows all products.", "is_correct": false },
+        { "id": 2, "text": "Train a custom vision model using the Image Analysis v4.0 capabilities by providing labeled images of their products.", "is_correct": true },
+        { "id": 3, "text": "Use the Face API to identify the products.", "is_correct": false },
+        { "id": 4, "text": "Use the OCR feature to read the product names from the images.", "is_correct": false }
+      ],
+      "explanation": "For custom object detection tasks (identifying objects not in the general model), the recommended approach is to train a custom model. The newer capabilities in Image Analysis v4.0 allow for effective custom model training with relatively few sample images."
+    },
+    {
+      "id": 27,
+      "type": "single",
+      "prompt": "What does 'chunking' refer to in an Azure AI Search skillset?",
+      "choices": [
+        { "id": 1, "text": "Combining many small documents into one large document.", "is_correct": false },
+        { "id": 2, "text": "Breaking a large document into smaller, more manageable pieces for indexing and retrieval.", "is_correct": true },
+        { "id": 3, "text": "Removing unnecessary 'chunks' of text like stop words.", "is_correct": false },
+        { "id": 4, "text": "The process of calculating the cost of a search query.", "is_correct": false }
+      ],
+      "explanation": "Chunking is a common data preparation step in knowledge mining and RAG pipelines. It involves splitting large documents into smaller, semantically coherent chunks, which are then easier to embed and retrieve for providing context to an LLM."
+    },
+    {
+      "id": 28,
+      "type": "single",
+      "prompt": "A developer wants to analyze customer feedback emails to automatically identify and extract the names of products mentioned. Which feature of the Azure AI Language service should they use?",
+      "choices": [
+        { "id": 1, "text": "Sentiment Analysis", "is_correct": false },
+        { "id": 2, "text": "Language Detection", "is_correct": false },
+        { "id": 3, "text": "Named Entity Recognition (NER)", "is_correct": true },
+        { "id": 4, "text": "Summarization", "is_correct": false }
+      ],
+      "explanation": "Named Entity Recognition (NER) is the specific NLP task of identifying and categorizing named entities in text, such as people, organizations, locations, and in this case, products."
+    },
+    {
+      "id": 29,
+      "type": "single",
+      "prompt": "Which of these is a valid use case for the Azure AI Face service's verification feature?",
+      "choices": [
+        { "id": 1, "text": "To determine the mood of a user for marketing purposes.", "is_correct": false },
+        { "id": 2, "text": "To compare a user's selfie with their ID photo to confirm their identity for account access.", "is_correct": true },
+        { "id": 3, "text": "To count the number of people in a crowd.", "is_correct": false },
+        { "id": 4, "text": "To find a specific person's face in a large collection of photos.", "is_correct": false }
+      ],
+      "explanation": "Face verification is a one-to-one comparison to answer the question 'Is this the same person?'. Comparing a new photo (like a selfie) to a trusted reference photo (like an ID) is a classic example of verification."
+    },
+    {
+      "id": 30,
+      "type": "single",
+      "prompt": "Which Azure resource provides a way to build a knowledge base of question-and-answer pairs that can be used by other applications or bots?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Search", "is_correct": false },
+        { "id": 2, "text": "Question Answering (feature of Azure AI Language)", "is_correct": true },
+        { "id": 3, "text": "Azure OpenAI", "is_correct": false },
+        { "id": 4, "text": "Azure Bot Service", "is_correct": false }
+      ],
+      "explanation": "The Question Answering feature of the Azure AI Language service is specifically designed to create knowledge bases from structured Q&A pairs or unstructured documents like FAQs."
+    },
+    {
+      "id": 31,
+      "type": "single",
+      "prompt": "If an application needs to transcribe audio from a call center in real-time, which Azure AI service is the most appropriate?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Language", "is_correct": false },
+        { "id": 2, "text": "Azure AI Speech", "is_correct": true },
+        { "id": 3, "text": "Azure AI Translator", "is_correct": false },
+        { "id": 4, "text": "Azure AI Document Intelligence", "is_correct": false }
+      ],
+      "explanation": "The Speech-to-Text feature of the Azure AI Speech service is designed for transcribing spoken audio into written text, and it supports both real-time and batch processing."
+    },
+    {
+      "id": 32,
+      "type": "single",
+      "prompt": "A developer is using the Azure AI Translator service and needs to ensure that their company's brand name 'InnovateTech' is never translated. What feature should they use?",
+      "choices": [
+        { "id": 1, "text": "Profanity filtering", "is_correct": false },
+        { "id": 2, "text": "A custom dictionary or glossary.", "is_correct": true },
+        { "id": 3, "text": "A multi-service account.", "is_correct": false },
+        { "id": 4, "text": "They must manually edit the output.", "is_correct": false }
+      ],
+      "explanation": "The Azure AI Translator service allows for custom dictionaries (glossaries) or selective translation rules to prevent specific terms, like brand names, from being translated."
+    },
+    {
+      "id": 33,
+      "type": "single",
+      "prompt": "The 'smart crop' feature in Azure AI Image Analysis is used to:",
+      "choices": [
+        { "id": 1, "text": "Crop an image to a random size.", "is_correct": false },
+        { "id": 2, "text": "Generate a thumbnail that preserves the most important region of the image.", "is_correct": true },
+        { "id": 3, "text": "Remove the background from an image.", "is_correct": false },
+        { "id": 4, "text": "Detect and crop out all human faces from an image.", "is_correct": false }
+      ],
+      "explanation": "Smart crop analyzes an image to identify its area of interest and generates cropping coordinates that preserve that region, which is useful for creating high-quality thumbnails."
+    },
+    {
+      "id": 34,
+      "type": "single",
+      "prompt": "How do developers typically consume the results from the Azure AI Document Intelligence service?",
+      "choices": [
+        { "id": 1, "text": "As a formatted PDF document.", "is_correct": false },
+        { "id": 2, "text": "As a plain text file with no structure.", "is_correct": false },
+        { "id": 3, "text": "As a structured JSON output containing key-value pairs, tables, and other extracted fields.", "is_correct": true },
+        { "id": 4, "text": "As a direct entry into a SQL database.", "is_correct": false }
+      ],
+      "explanation": "The service returns a detailed, structured JSON response that makes it easy for developers to programmatically access the extracted data, including fields, tables, confidence scores, and bounding box information."
+    },
+    {
+      "id": 35,
+      "type": "single",
+      "prompt": "Which of these is a key advantage of a 'single service type' Azure AI resource?",
+      "choices": [
+        { "id": 1, "text": "It has a single API key for all services.", "is_correct": false },
+        { "id": 2, "text": "It often has a free tier available for development and testing.", "is_correct": true },
+        { "id": 3, "text": "It is required for using Azure OpenAI.", "is_correct": false },
+        { "id": 4, "text": "It offers better performance than a multi-service account.", "is_correct": false }
+      ],
+      "explanation": "Single-service resources often come with a free pricing tier, which is ideal for developers who are just getting started or have low usage needs. Multi-service accounts do not have a free tier."
+    },
+    {
+      "id": 36,
+      "type": "single",
+      "prompt": "The data ingestion process in Azure AI Search, which includes applying skillsets, is also known as the:",
+      "choices": [
+        { "id": 1, "text": "Query pipeline", "is_correct": false },
+        { "id": 2, "text": "Indexing pipeline", "is_correct": true },
+        { "id": 3, "text": "Billing pipeline", "is_correct": false },
+        { "id": 4, "text": "Deployment pipeline", "is_correct": false }
+      ],
+      "explanation": "The process of ingesting data from a source, enriching it with AI skillsets, and populating the search index is known as the indexing pipeline."
+    },
+    {
+      "id": 37,
+      "type": "single",
+      "prompt": "If a chatbot needs to understand a user's request like 'book a flight to Paris for tomorrow', it would use LUIS to identify 'book a flight' as the ___ and 'Paris' and 'tomorrow' as ___.",
+      "choices": [
+        { "id": 1, "text": "entity; intents", "is_correct": false },
+        { "id": 2, "text": "intent; entities", "is_correct": true },
+        { "id": 3, "text": "intent; utterances", "is_correct": false },
+        { "id": 4, "text": "utterance; intents", "is_correct": false }
+      ],
+      "explanation": "LUIS is designed to extract the user's goal ('book a flight' is the intent) and the specific pieces of data needed to fulfill that goal ('Paris' and 'tomorrow' are the entities)."
+    },
+    {
+      "id": 38,
+      "type": "single",
+      "prompt": "What kind of data sources can Azure AI Search ingest from?",
+      "choices": [
+        { "id": 1, "text": "Only from Azure SQL databases.", "is_correct": false },
+        { "id": 2, "text": "Only from Azure Blob Storage.", "is_correct": false },
+        { "id": 3, "text": "From heterogeneous sources like Azure Blob Storage, databases, and data lakes.", "is_correct": true },
+        { "id": 4, "text": "Only from on-premises file shares.", "is_correct": false }
+      ],
+      "explanation": "Azure AI Search is designed to ingest data from a wide variety of private, heterogeneous sources, making it a powerful tool for centralizing and searching an organization's knowledge."
+    },
+    {
+      "id": 39,
+      "type": "single",
+      "prompt": "An application needs to analyze short customer reviews and quickly classify them as 'positive' or 'negative'. Which Azure AI service feature is best for this?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Language - Sentiment Analysis", "is_correct": true },
+        { "id": 2, "text": "Azure AI Translator", "is_correct": false },
+        { "id": 3, "text": "Azure AI Face - Verification", "is_correct": false },
+        { "id": 4, "text": "Azure AI Speech - Text-to-Speech", "is_correct": false }
+      ],
+      "explanation": "Sentiment analysis is a standard feature of the Azure AI Language service that analyzes text and returns scores indicating whether the sentiment is positive, negative, neutral, or mixed."
+    },
+    {
+      "id": 40,
+      "type": "single",
+      "prompt": "The primary role of Azure Bot Service is to:",
+      "choices": [
+        { "id": 1, "text": "Provide the natural language understanding for the bot.", "is_correct": false },
+        { "id": 2, "text": "Provide the framework to build, connect, and manage the bot across different communication channels.", "is_correct": true },
+        { "id": 3, "text": "Host the knowledge base that the bot uses to answer questions.", "is_correct": false },
+        { "id": 4, "text": "Generate the bot's conversational responses using a large language model.", "is_correct": false }
+      ],
+      "explanation": "While a bot uses other services like Language and Question Answering for its 'brain', the Azure Bot Service provides the underlying infrastructure for development and, crucially, for connecting the bot to channels like Microsoft Teams, web chat, and email."
+    }
+  ]
+}
