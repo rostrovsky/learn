@@ -26,6 +26,7 @@
       Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       background: var(--bg); color: var(--fg);
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      touch-action: manipulation; /* Prevent default touch behaviors */
     }
 
     .container { 
@@ -79,6 +80,35 @@
       border: 1px solid rgba(100,116,139,0.12);
       display: grid;
       align-items: center;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Touch area indicators (subtle visual feedback) */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: var(--radius);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .card.touch-left::before {
+      background: linear-gradient(to right, rgba(124, 58, 237, 0.1), transparent);
+    }
+
+    .card.touch-right::before {
+      background: linear-gradient(to left, rgba(124, 58, 237, 0.1), transparent);
+    }
+
+    .card.touch-center::before {
+      background: linear-gradient(to right, transparent, rgba(124, 58, 237, 0.1), transparent);
     }
 
     .prompt { font-size: clamp(18px, 2.4vw, 26px); line-height: 1.35; letter-spacing: -0.01em; }
@@ -149,7 +179,7 @@
         </div>
       </section>
       <div id="cardCount"></div>
-      <div id="hint" class="hint hidden">Tip: press <code class="kbd">Space</code> to flip, <code class="kbd">←</code>/<code class="kbd">→</code> to navigate, <code class="kbd">S</code> to shuffle.</div>
+      <div id="hint" class="hint hidden">Press <code class="kbd">Space</code> to flip, <code class="kbd">←</code>/<code class="kbd">→</code> to navigate, <code class="kbd">S</code> to shuffle.<br>On mobile: touch sides of a card to navigate, center to flip.</div>
     </div>
 
     <footer>
@@ -246,6 +276,83 @@
   const restartBtn = document.getElementById('restartBtn');
   const demoBtn = document.getElementById('demoBtn');
 
+  // --- Touch handling ---
+  let touchStartX = 0;
+  let touchStartTime = 0;
+
+  cardEl.addEventListener('touchstart', (e) => {
+    if (!state.deck) return;
+    
+    touchStartX = e.touches[0].clientX;
+    touchStartTime = Date.now();
+    
+    // Remove any existing touch classes
+    cardEl.classList.remove('touch-left', 'touch-right', 'touch-center');
+  });
+
+  cardEl.addEventListener('touchend', (e) => {
+    if (!state.deck) return;
+    
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndTime = Date.now();
+    const touchDuration = touchEndTime - touchStartTime;
+    
+    // Only process taps (not swipes)
+    if (touchDuration > 500) return; // 500ms threshold for tap vs swipe
+    
+    const cardRect = cardEl.getBoundingClientRect();
+    const touchX = touchEndX - cardRect.left;
+    const cardWidth = cardRect.width;
+    
+    // Determine which area was touched
+    if (touchX < cardWidth / 3) {
+      // Left third - previous card
+      if (state.idx > 0) {
+        state.idx--;
+        state.revealed = false;
+        updateMeta();
+        renderCard();
+      }
+    } else if (touchX > (cardWidth * 2) / 3) {
+      // Right third - next card
+      if (state.idx < state.order.length - 1) {
+        state.idx++;
+        state.revealed = false;
+        updateMeta();
+        renderCard();
+      }
+    } else {
+      // Center third - flip card
+      state.revealed = !state.revealed;
+      renderCard();
+    }
+    
+    // Remove touch feedback classes
+    cardEl.classList.remove('touch-left', 'touch-right', 'touch-center');
+  });
+
+  // Add visual feedback during touch
+  cardEl.addEventListener('touchmove', (e) => {
+    if (!state.deck) return;
+    
+    const touchX = e.touches[0].clientX;
+    const cardRect = cardEl.getBoundingClientRect();
+    const relativeX = touchX - cardRect.left;
+    const cardWidth = cardRect.width;
+    
+    // Remove existing classes
+    cardEl.classList.remove('touch-left', 'touch-right', 'touch-center');
+    
+    // Add appropriate class based on touch position
+    if (relativeX < cardWidth / 3) {
+      cardEl.classList.add('touch-left');
+    } else if (relativeX > (cardWidth * 2) / 3) {
+      cardEl.classList.add('touch-right');
+    } else {
+      cardEl.classList.add('touch-center');
+    }
+  });
+
   // --- File loading ---
   loadJsonBtn.addEventListener('click', () => fileInput.click());
   fileInput.addEventListener('change', (e) => {
@@ -264,7 +371,7 @@
       try {
         const text = reader.result;
         const parsed = JSON.parse(text);
-        loadDeck(parsed);
+        loadDeck(parsed, false); // false indicates JSON file loaded
       } catch (err) {
         showErrors([`Invalid JSON: ${err.message}`]);
       }
@@ -274,7 +381,7 @@
   }
 
   // --- Deck loading & rendering ---
-  function loadDeck(deck) {
+  function loadDeck(deck, isDemo = true) {
     const res = validateDeck(deck);
     if (!res.ok) { showErrors(res.errors); return; }
 
@@ -288,6 +395,11 @@
     cardEl.classList.remove('hidden');
     meta.classList.remove('hidden');
     hintEl.classList.remove('hidden');
+
+    // Hide demo button only when JSON is loaded (not demo)
+    if (!isDemo) {
+      demoBtn.classList.add('hidden');
+    }
 
     updateMeta();
     renderCard();
@@ -375,7 +487,7 @@
     ]
   };
 
-  demoBtn.addEventListener('click', () => loadDeck(demoDeck));
+  demoBtn.addEventListener('click', () => loadDeck(demoDeck, true)); // true indicates demo loaded
   </script>
 </body>
 </html>
