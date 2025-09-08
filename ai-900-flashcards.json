@@ -1,0 +1,325 @@
+{
+  "title": "Artificial Intelligence Fundamentals & Generative AI",
+  "version": 1,
+  "cards": [
+    {
+      "id": 1,
+      "front": "What is Artificial Intelligence (AI)?",
+      "back": [
+        "A computer system that imitates some aspect of human behavior or capabilities such as recognizing speech, classifying images, translating languages, making decisions, and predicting outcomes."
+      ]
+    },
+    {
+      "id": 2,
+      "front": "How does Generative AI differ from regular AI?",
+      "back": [
+        "Regular AI: Primarily imitates specific human behaviors (e.g., speech recognition, image classification, translation).",
+        "Generative AI: Focuses on creating original content after being trained on large amounts of information."
+      ]
+    },
+    {
+      "id": 3,
+      "front": "What forms can original content created by Generative AI take?",
+      "back": [
+        "Natural language: conversations, instructions, summaries, text generation.",
+        "Code: functions, debugging help, test cases.",
+        "Images: pictures generated from text prompts."
+      ]
+    },
+    {
+      "id": 4,
+      "front": "What is a Large Language Model (LLM)?",
+      "back": [
+        "A neural network with billions or trillions of parameters trained to predict the next token, enabling human-like text generation and many language tasks.",
+        "Examples include GPT and Llama."
+      ]
+    },
+    {
+      "id": 5,
+      "front": "What is a \"prompt\" in the context of LLMs?",
+      "back": [
+        "The natural-language instructions or input given to a Large Language Model; prompt quality strongly influences response quality."
+      ]
+    },
+    {
+      "id": 6,
+      "front": "What is \"inference\" in the context of LLMs?",
+      "back": [
+        "The process where a trained LLM predicts the next token repeatedly until an end-of-sequence, producing its output for a given prompt."
+      ]
+    },
+    {
+      "id": 7,
+      "front": "What kind of data are Large Language Models trained on?",
+      "back": [
+        "Huge datasets from the web, Wikipedia, books, and other corpora; specific datasets vary by model."
+      ]
+    },
+    {
+      "id": 8,
+      "front": "What are \"parameters\" in an LLM, and why are they important?",
+      "back": [
+        "Parameters are the weights and biases in the neural network.",
+        "More parameters generally enable better capabilities.",
+        "Modern models have billions to trillions of parameters and are read-only after training."
+      ]
+    },
+    {
+      "id": 9,
+      "front": "Are LLMs considered Artificial General Intelligence (AGI)?",
+      "back": [
+        "No. They are powerful for language tasks but do not learn like AGI and are focused on next-token prediction (often weak at complex math)."
+      ]
+    },
+    {
+      "id": 10,
+      "front": "What is the Transformer model and its significance?",
+      "back": [
+        "The foundational architecture (from 'Attention Is All You Need') used by modern LLMs.",
+        "Characterized by encoder-decoder design; many models like GPT use decoder-only variants to process and generate text."
+      ]
+    },
+    {
+      "id": 11,
+      "front": "What are \"tokens\" and \"tokenization\" in LLMs?",
+      "back": [
+        "Tokens are small text units (words, subwords, punctuation, emojis).",
+        "Tokenization splits text into tokens and maps them to numeric IDs."
+      ]
+    },
+    {
+      "id": 12,
+      "front": "What is an \"embedding model\" and what does it do?",
+      "back": [
+        "It converts tokens into vectors that capture semantic meaning.",
+        "Semantically similar words have vectors that are numerically close (e.g., 'boss' and 'manager')."
+      ]
+    },
+    {
+      "id": 13,
+      "front": "Why is positional encoding necessary in LLMs?",
+      "back": [
+        "Word order affects meaning; positional encoding injects position information into word vectors (often via sine/cosine functions)."
+      ]
+    },
+    {
+      "id": 14,
+      "front": "What is self-attention and why is it important?",
+      "back": [
+        "It lets the model weigh the importance of different words relative to each other, preserving context across long inputs and outputs."
+      ]
+    },
+    {
+      "id": 15,
+      "front": "What is GPT and what are some characteristics?",
+      "back": [
+        "GPT is a Generative Pre-trained Transformer from OpenAI.",
+        "Pre-trained on large datasets; newer versions have more parameters and larger context windows.",
+        "The context window limits how much input and output the model can handle at once."
+      ]
+    },
+    {
+      "id": 16,
+      "front": "How does ChatGPT relate to GPT?",
+      "back": [
+        "ChatGPT is GPT further trained for dialogue using supervised examples and preference tuning to behave well in conversations."
+      ]
+    },
+    {
+      "id": 17,
+      "front": "What is the role of Microsoft Copilots?",
+      "back": [
+        "They orchestrate between users and LLMs: ground with data (e.g., Graph, Bing), build a meta-prompt, call the LLM, and present results.",
+        "A SaaS-like end-to-end generative AI experience."
+      ]
+    },
+    {
+      "id": 18,
+      "front": "What is prompt engineering and why is it critical?",
+      "back": [
+        "The practice of crafting effective prompts to elicit the best responses.",
+        "Techniques include explicit instructions, role specification, zero-shot, few-shot, and grounding."
+      ]
+    },
+    {
+      "id": 19,
+      "front": "What is \"grounding\" in prompt engineering?",
+      "back": [
+        "Adding specific external data to the prompt (e.g., recent emails) so the LLM has relevant context it wouldn’t otherwise know."
+      ]
+    },
+    {
+      "id": 20,
+      "front": "What is the Azure OpenAI Service?",
+      "back": [
+        "An Azure service hosting OpenAI models (GPT, embeddings, image models) within Microsoft’s infrastructure, exposed via API and managed in Azure OpenAI Studio."
+      ]
+    },
+    {
+      "id": 21,
+      "front": "What is Machine Learning (ML)?",
+      "back": [
+        "A subset of AI where systems learn from past data to build models that make future predictions without explicit step-by-step programming."
+      ]
+    },
+    {
+      "id": 22,
+      "front": "What are \"features\" and \"labels\" in ML training data?",
+      "back": [
+        "Features: input characteristics (pixels, temperatures, square footage).",
+        "Labels: the correct answers associated with features (e.g., class name, numeric value)."
+      ]
+    },
+    {
+      "id": 23,
+      "front": "What is supervised learning in ML?",
+      "back": [
+        "Training with labeled data to map inputs to outputs.",
+        "Includes regression (numeric predictions) and classification (discrete categories)."
+      ]
+    },
+    {
+      "id": 24,
+      "front": "What is unsupervised learning in ML?",
+      "back": [
+        "Training without labels, discovering patterns such as clusters based on similarities."
+      ]
+    },
+    {
+      "id": 25,
+      "front": "What is deep learning and how does it relate to ML?",
+      "back": [
+        "A subset of ML using neural networks with many hidden layers to model complex relationships; powers LLMs and other advanced AI."
+      ]
+    },
+    {
+      "id": 26,
+      "front": "Describe the basic structure and function of a neural network.",
+      "back": [
+        "Layers: input, one or more hidden, and output layers connected by weighted edges.",
+        "Neurons apply activation functions; weights and biases enable complex pattern modeling."
+      ]
+    },
+    {
+      "id": 27,
+      "front": "What is Azure Machine Learning Studio used for?",
+      "back": [
+        "An Azure platform for custom ML: datasets, labeling, training, evaluation, and deployment (e.g., to containers)."
+      ]
+    },
+    {
+      "id": 28,
+      "front": "What does \"multimodal AI\" mean?",
+      "back": [
+        "AI that understands and interacts with multiple data types (text, images, audio, video); e.g., GPT-4o is multimodal."
+      ]
+    },
+    {
+      "id": 29,
+      "front": "What are the main types of Azure AI Services resources?",
+      "back": [
+        "Single Service Type: one capability (often with a free tier), own endpoint/key.",
+        "Multi-Service Account: most AI services under one account (no free tier).",
+        "Azure OpenAI Service and Azure AI Search are separate resource types."
+      ]
+    },
+    {
+      "id": 30,
+      "front": "How do apps connect and authenticate to Azure AI Services?",
+      "back": [
+        "REST endpoints and SDKs for requests/responses in JSON.",
+        "Authentication via keys (e.g., in Key Vault) or Entra ID with RBAC/Managed Identities."
+      ]
+    },
+    {
+      "id": 31,
+      "front": "Why is Responsible AI crucial, and what risks does it address?",
+      "back": [
+        "AI shifts decisions from humans to systems, introducing risks: bias, errors, data exposure, lack of inclusiveness, transparency, and accountability."
+      ]
+    },
+    {
+      "id": 32,
+      "front": "List the six key principles of Responsible AI.",
+      "back": [
+        "Fairness",
+        "Reliability & Safety",
+        "Privacy & Security",
+        "Inclusiveness",
+        "Transparency",
+        "Accountability"
+      ]
+    },
+    {
+      "id": 33,
+      "front": "What capabilities does Azure AI Image Analysis offer?",
+      "back": [
+        "Captions and tags; object detection with bounding boxes; background removal and smart crops; small-scale OCR via the 'read' feature."
+      ]
+    },
+    {
+      "id": 34,
+      "front": "What are the main functions of Azure AI Face services?",
+      "back": [
+        "Face detection with pose/landmarks/mask, liveness checks, identification and verification; no emotion or gender; some features require onboarding."
+      ]
+    },
+    {
+      "id": 35,
+      "front": "How do Custom Vision services enable custom image training?",
+      "back": [
+        "Older Custom Vision uses CNNs (~15 images/category).",
+        "Newer Image Analysis v4.0 uses Transformer models; workable with 2–5 images, better with ~50–60; training takes longer."
+      ]
+    },
+    {
+      "id": 36,
+      "front": "What are key features of the Azure AI Language service?",
+      "back": [
+        "Language detection, sentiment, key phrases, entity recognition; summarization; question answering from a knowledge base."
+      ]
+    },
+    {
+      "id": 37,
+      "front": "What is the Azure Bot Service used for?",
+      "back": [
+        "Building, publishing, and managing chatbots that can use knowledge bases and deploy across channels like Teams, web, and email."
+      ]
+    },
+    {
+      "id": 38,
+      "front": "What does the Azure AI Language Understanding (LUIS) service do?",
+      "back": [
+        "Extracts intents and entities from user utterances (e.g., intent: 'turn on'; entity: 'lights') for automation scenarios."
+      ]
+    },
+    {
+      "id": 39,
+      "front": "What functionalities do Azure AI Speech services provide?",
+      "back": [
+        "Text-to-speech, speech-to-text, language recognition, and speech translation."
+      ]
+    },
+    {
+      "id": 40,
+      "front": "What are the capabilities of the Azure AI Translator service?",
+      "back": [
+        "Translate text/documents; custom terms; profanity filters; selective translation to preserve specific words."
+      ]
+    },
+    {
+      "id": 41,
+      "front": "What is Azure AI Document Intelligence and its uses?",
+      "back": [
+        "Large-scale document analysis with structured outputs, pre-built models (receipts, invoices, IDs), custom models with few examples, and JSON outputs."
+      ]
+    },
+    {
+      "id": 42,
+      "front": "What is knowledge mining and how does Azure AI Search help?",
+      "back": [
+        "Extracts insights from large data; Azure AI Search uses skillsets and embeddings to build text and vector indexes, supports hybrid search and reranking; foundational for RAG."
+      ]
+    }
+  ]
+}
