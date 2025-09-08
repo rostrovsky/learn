@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Tools</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a; /* slate-900 */
+      --muted: #64748b; /* slate-500 */
+      --accent: #111827; /* gray-900 */
+      --accent-2: #e5e7eb; /* gray-200 */
+      --ring: #1f2937; /* gray-800 */
+      --card: #ffffff;
+      --shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+      --radius: 18px;
+      --primary: #7c3aed; /* purple-600 */
+      --primary-hover: #6d28d9; /* purple-700 */
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
+      Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--fg);
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container { 
+      max-width: 960px; 
+      margin: 0 auto; 
+      padding: 0 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      margin: 0 0 48px 0;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .btn {
+      appearance: none; border: 1px solid var(--accent-2); background: #fff; color: var(--fg);
+      border-radius: 12px; padding: 16px 32px; font-size: 18px; cursor: pointer; 
+      transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: 0 1px 0 rgba(2,6,23,0.02);
+      text-decoration: none;
+      display: inline-block;
+      min-width: 200px;
+      text-align: center;
+    }
+    .btn:hover { border-color: #cbd5e1; }
+    .btn:active { transform: translateY(1px); }
+    .btn[disabled] { opacity: .45; cursor: not-allowed; }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      font-weight: 500;
+    }
+    .btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+
+    footer { 
+      margin-top: 40px; 
+      color: var(--muted); 
+      font-size: 12px; 
+      display: flex; 
+      justify-content: center;
+      gap: 8px; 
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <h1>Study Tools</h1>
+      <div class="links-container">
+        <a href="flashcards.html" class="btn">Flashcards</a>
+        <a href="quiz.html" class="btn">Quiz</a>
+      </div>
+    </div>
+
+    <footer>
+      <div>Minimal, self-contained. No network, no tracking.</div>
+    </footer>
+  </div>
+</body>
+</html>
