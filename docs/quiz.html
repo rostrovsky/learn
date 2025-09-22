@@ -22,6 +22,23 @@
       --chip: #f3f4f6; /* gray-100 */
     }
 
+    /* Tokyo-night dark theme */
+    [data-theme="dark"] {
+      --bg: #1a1b26;
+      --fg: #a9b1d6;
+      --muted: #565f89;
+      --accent: #c0caf5;
+      --accent-2: #24283b;
+      --ring: #7aa2f7;
+      --card: #24283b;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      --primary: #7aa2f7;
+      --primary-hover: #9abdfa;
+      --correct: #9ece6a;
+      --incorrect: #f7768e;
+      --chip: #1e202e;
+    }
+
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
@@ -30,6 +47,7 @@
       background: var(--bg); color: var(--fg);
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
       touch-action: manipulation;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .container { 
@@ -48,7 +66,7 @@
     header .subtitle { color: var(--muted); font-size: 14px; }
 
     .btn {
-      appearance: none; border: 1px solid var(--accent-2); background: #fff; color: var(--fg);
+      appearance: none; border: 1px solid var(--accent-2); background: var(--card); color: var(--fg);
       border-radius: 12px; padding: 10px 14px; font-size: 14px; cursor: pointer; 
       transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
       box-shadow: 0 1px 0 rgba(2,6,23,0.02);
@@ -64,6 +82,21 @@
       font-weight: 500;
     }
     .btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      background: var(--card);
+      border: 1px solid var(--accent-2);
+      color: var(--fg);
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle:hover {
+      border-color: var(--primary);
+    }
 
     .controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 18px 0 8px; flex-wrap: wrap; }
     .controls .left, .controls .right { display: flex; gap: 8px; align-items: center; }
@@ -81,6 +114,7 @@
       border: 1px solid rgba(100,116,139,0.12);
       display: grid;
       align-items: start;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
     .prompt { font-size: clamp(18px, 2.4vw, 26px); line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 12px; }
@@ -88,15 +122,19 @@
     .choice {
       display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start;
       padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(100,116,139,0.18);
-      background: #fff;
+      background: var(--card);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     .choice.disabled { opacity: .7; }
     .choice.correct { border-color: rgba(22,163,74,.45); background: #f0fdf4; }
+    [data-theme="dark"] .choice.correct { border-color: rgba(158,206,106,.45); background: rgba(158,206,106,0.1); }
     .choice.incorrect { border-color: rgba(220,38,38,.45); background: #fef2f2; }
+    [data-theme="dark"] .choice.incorrect { border-color: rgba(247,118,142,.45); background: rgba(247,118,142,0.1); }
     .choice .label { margin-top: -2px; }
 
     .hint { color: var(--muted); font-size: 12px; text-align: center; margin-top: 10px; }
     .errors .error { background: #fef2f2; border: 1px solid #fecaca; color: #7f1d1d; padding: 12px 14px; border-radius: 12px; font-size: 14px; }
+    [data-theme="dark"] .errors .error { background: #3b1f1f; border-color: #7a3a3a; color: #f87171; }
     .error + .error { margin-top: 8px; }
 
     .hidden { display: none !important; }
@@ -117,10 +155,10 @@
       background: var(--card);
       box-shadow: var(--shadow);
       border: 1px solid rgba(100,116,139,0.12);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     .result h2 { margin: 0; font-size: clamp(20px, 2.5vw, 28px); }
     .result .score { font-size: clamp(18px, 2.2vw, 24px); }
-    .result .pct { font-weight: 600; }
 
     .review {
       display: grid; gap: 14px; margin-top: 12px;
@@ -130,15 +168,20 @@
       border: 1px solid rgba(100,116,139,0.12);
       background: var(--card);
       box-shadow: var(--shadow);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     .review .q h3 { margin: 0 0 6px 0; font-size: 16px; }
     .review .choice-line { display: flex; align-items: center; gap: 8px; font-size: 14px; }
     .badge {
       font-size: 11px; padding: 2px 8px; border-radius: 999px; border: 1px solid #e5e7eb; background: #f9fafb; color: #374151;
     }
+    [data-theme="dark"] .badge { background: #1e202e; border-color: #3b3f57; color: var(--fg); }
     .badge.correct { border-color: rgba(22,163,74,.35); color: #065f46; background: #ecfdf5; }
+    [data-theme="dark"] .badge.correct { border-color: rgba(158,206,106,.35); color: #9ece6a; background: rgba(158,206,106,0.1); }
     .badge.yours { border-color: rgba(124,58,237,.35); color: #4c1d95; background: #f5f3ff; }
+    [data-theme="dark"] .badge.yours { border-color: rgba(122,162,247,.35); color: #7aa2f7; background: rgba(122,162,247,0.1); }
     .badge.wrong { border-color: rgba(220,38,38,.35); color: #7f1d1d; background: #fef2f2; }
+    [data-theme="dark"] .badge.wrong { border-color: rgba(247,118,142,.35); color: #f7768e; background: rgba(247,118,142,0.1); }
 
     footer { 
       margin-top: 20px; 
@@ -153,6 +196,7 @@
       text-align: center;
     }
     code.kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background: #f3f4f6; padding: 2px 6px; border-radius: 6px; border: 1px solid #e5e7eb; }
+    [data-theme="dark"] code.kbd { background: #1e202e; border-color: #3b3f57; color: var(--fg); }
   </style>
 </head>
 <body>
@@ -161,9 +205,10 @@
       <header>
         <div>
           <h1>Quiz</h1>
-          <div class="subtitle">Load a quiz JSON and answer sequentially. No going back.</div>
+          <div class="subtitle">Load a quiz JSON and answer sequentially.</div>
         </div>
         <div class="right">
+          <button id="themeToggle" class="theme-toggle" type="button" title="Toggle theme">🌙</button>
           <button id="loadJsonBtn" class="btn btn-primary" type="button" title="Load JSON file">Load JSON</button>
           <button id="demoBtn" class="btn" type="button" title="Load a small demo quiz">Load demo</button>
         </div>
@@ -229,6 +274,28 @@
   <input id="fileInput" type="file" accept="application/json,.json" class="hidden" />
 
   <script>
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Check for saved theme preference or default to light
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  body.setAttribute('data-theme', currentTheme);
+  updateThemeIcon(currentTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+
+  function updateThemeIcon(theme) {
+    themeToggle.textContent = theme === 'light' ? '🌙' : '☀️';
+  }
+
   // ---------- Minimal validator for the quiz schema ----------
   function validateQuiz(quiz) {
     const errors = [];

@@ -19,6 +19,20 @@
       --primary-hover: #6d28d9; /* purple-700 */
     }
 
+    /* Tokyo-night dark theme */
+    [data-theme="dark"] {
+      --bg: #1a1b26;
+      --fg: #a9b1d6;
+      --muted: #565f89;
+      --accent: #c0caf5;
+      --accent-2: #24283b;
+      --ring: #7aa2f7;
+      --card: #24283b;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      --primary: #7aa2f7;
+      --primary-hover: #9abdfa;
+    }
+
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
@@ -27,6 +41,7 @@
       background: var(--bg); color: var(--fg);
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
       touch-action: manipulation; /* Prevent default touch behaviors */
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .container { 
@@ -47,7 +62,7 @@
     header .subtitle { color: var(--muted); font-size: 14px; }
 
     .btn {
-      appearance: none; border: 1px solid var(--accent-2); background: #fff; color: var(--fg);
+      appearance: none; border: 1px solid var(--accent-2); background: var(--card); color: var(--fg);
       border-radius: 12px; padding: 10px 14px; font-size: 14px; cursor: pointer; 
       transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
       box-shadow: 0 1px 0 rgba(2,6,23,0.02);
@@ -63,6 +78,21 @@
       font-weight: 500;
     }
     .btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      background: var(--card);
+      border: 1px solid var(--accent-2);
+      color: var(--fg);
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle:hover {
+      border-color: var(--primary);
+    }
 
     .controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 18px 0 8px; flex-wrap: wrap; }
     .controls .left, .controls .right { display: flex; gap: 8px; align-items: center; }
@@ -84,6 +114,7 @@
       user-select: none;
       -webkit-user-select: none;
       -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
     /* Touch area indicators (subtle visual feedback) */
@@ -120,6 +151,7 @@
     .hint { color: var(--muted); font-size: 12px; text-align: center; margin-top: 10px; }
 
     .error { background: #fef2f2; border: 1px solid #fecaca; color: #7f1d1d; padding: 12px 14px; border-radius: 12px; font-size: 14px; }
+    [data-theme="dark"] .error { background: #3b1f1f; border-color: #7a3a3a; color: #f87171; }
     .error + .error { margin-top: 8px; }
 
     .hidden { display: none !important; }
@@ -145,6 +177,7 @@
       text-align: center;
     }
     code.kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background: #f3f4f6; padding: 2px 6px; border-radius: 6px; border: 1px solid #e5e7eb; }
+    [data-theme="dark"] code.kbd { background: #1e202e; border-color: #3b3f57; color: var(--fg); }
   </style>
 </head>
 <body>
@@ -152,9 +185,10 @@
     <div class="main-content">
       <header>
         <div>
-          <h1>Flashcards Deck</h1>
+          <h1>Flashcards</h1>
         </div>
         <div class="right">
+          <button id="themeToggle" class="theme-toggle" type="button" title="Toggle theme">🌙</button>
           <button id="loadJsonBtn" class="btn btn-primary" type="button" title="Load JSON file">Load JSON</button>
           <button id="demoBtn" class="btn" type="button" title="Load a small demo deck">Load demo</button>
         </div>
@@ -196,6 +230,28 @@
   <input id="fileInput" type="file" accept="application/json,.json" class="hidden" />
 
   <script>
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Check for saved theme preference or default to light
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  body.setAttribute('data-theme', currentTheme);
+  updateThemeIcon(currentTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+
+  function updateThemeIcon(theme) {
+    themeToggle.textContent = theme === 'light' ? '🌙' : '☀️';
+  }
+
   // --- Minimal validator tailored to the given schema ---
   function validateDeck(deck) {
     const errors = [];
