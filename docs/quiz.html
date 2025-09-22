@@ -183,13 +183,15 @@
           <div id="meta" class="pill hidden"><span class="dot"></span><span id="metaText"></span></div>
           <div id="prompt" class="prompt"></div>
           <form id="choicesForm" class="choices" novalidate></form>
-          <div style="display:flex; gap:8px; margin-top:14px;">
+          <div style="display:flex; gap:8px; margin-top:14px; justify-content:center;">
             <button id="submitBtn" class="btn btn-primary" type="button">Submit</button>
             <button id="nextBtn" class="btn" type="button">Next ▶︎</button>
           </div>
-          <div id="hint" class="hint">Keyboard: <code class="kbd">1..9</code> select/toggle, <code class="kbd">Enter</code> submit.</div>
         </div>
       </section>
+
+      <!-- Tips positioned under the card, same as flashcards.html -->
+      <div id="hint" class="hint hidden">Keyboard: <code class="kbd">1..9</code> select/toggle, <code class="kbd">Enter</code> submit.</div>
 
       <!-- Result screen -->
       <section id="resultView" class="result hidden" aria-live="polite">
@@ -325,6 +327,8 @@
   const backToResultsBtn = document.getElementById('backToResultsBtn');
   const retryFromStartBtn = document.getElementById('retryFromStartBtn');
 
+  const hintEl = document.getElementById('hint');
+
   // ---------- File loading ----------
   loadJsonBtn.addEventListener('click', () => fileInput.click());
   fileInput.addEventListener('change', (e) => {
@@ -374,6 +378,9 @@
     metaPill.classList.add('hidden');
     nextBtn.disabled = true;
 
+    // Show hint when quiz is loaded
+    hintEl.classList.remove('hidden');
+
     updateProgress();
     renderQuestion();
     focusFirstInteractive();
@@ -392,6 +399,9 @@
     reviewView.classList.add('hidden');
     metaPill.classList.add('hidden');
     nextBtn.disabled = true;
+
+    // Show hint when restarting
+    hintEl.classList.remove('hidden');
 
     updateProgress();
     renderQuestion();
@@ -532,7 +542,8 @@
       renderQuestion();
       focusFirstInteractive();
     } else {
-      // Finish
+      // Finish - hide hint when showing results
+      hintEl.classList.add('hidden');
       state.finished = true;
       showResults();
     }
