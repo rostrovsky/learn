@@ -323,91 +323,76 @@
     },
     {
       "id": 43,
-      "front": "What is Artificial Intelligence (AI)?",
-      "back": [
-        "The ability of computers to imitate aspects of human behavior such as speech recognition, image classification, translation, decision-making, and prediction."
-      ]
-    },
-    {
-      "id": 44,
-      "front": "Regular AI vs. Generative AI — key difference",
-      "back": [
-        "Regular AI imitates or predicts based on existing data.",
-        "Generative AI creates original content (text, images, code) from learned patterns."
-      ]
-    },
-    {
-      "id": 45,
       "front": "Define Machine Learning (ML).",
       "back": [
         "A subset of AI where systems learn patterns from data to make predictions without explicit programming."
       ]
     },
     {
-      "id": 46,
+      "id": 44,
       "front": "What is training data in ML?",
       "back": [
         "Labeled examples used to teach a model the mapping from inputs (features) to outputs (labels)."
       ]
     },
     {
-      "id": 47,
+      "id": 45,
       "front": "What are features in ML?",
       "back": [
         "Input variables describing each example used by the model to learn."
       ]
     },
     {
-      "id": 48,
+      "id": 46,
       "front": "What are labels in ML?",
       "back": [
         "The correct answers or target outputs associated with each training example."
       ]
     },
     {
-      "id": 49,
+      "id": 47,
       "front": "What is an ML algorithm?",
       "back": [
         "A procedure (e.g., decision trees, linear regression, SVM) that learns relationships between features and labels."
       ]
     },
     {
-      "id": 50,
+      "id": 48,
       "front": "What is an ML model?",
       "back": [
         "The trained artifact that can make predictions on new, unseen data."
       ]
     },
     {
-      "id": 51,
+      "id": 49,
       "front": "Why is ML training iterative?",
       "back": [
         "Models are refined via validation/testing and parameter tuning to improve performance."
       ]
     },
     {
-      "id": 52,
+      "id": 50,
       "front": "Supervised learning — definition",
       "back": [
         "Learning from labeled data to predict outputs for new inputs."
       ]
     },
     {
-      "id": 53,
+      "id": 51,
       "front": "Regression — definition & example",
       "back": [
         "Predicts a numeric value (e.g., house price from square footage)."
       ]
     },
     {
-      "id": 54,
+      "id": 52,
       "front": "Classification — definition",
       "back": [
         "Predicts a category or class label for an input."
       ]
     },
     {
-      "id": 55,
+      "id": 53,
       "front": "Binary vs. multiclass classification",
       "back": [
         "Binary: two outcomes (spam/not spam).",
@@ -415,378 +400,378 @@
       ]
     },
     {
-      "id": 56,
+      "id": 54,
       "front": "Unsupervised learning — definition",
       "back": [
         "Finds patterns in unlabeled data (e.g., clustering similar items)."
       ]
     },
     {
-      "id": 57,
+      "id": 55,
       "front": "What is Deep Learning (DL)?",
       "back": [
         "A subset of ML using multi-layer neural networks to model complex relationships."
       ]
     },
     {
-      "id": 58,
+      "id": 56,
       "front": "Neural network basics",
       "back": [
         "Networks of neurons (units) connected by weighted edges that transform inputs through layers."
       ]
     },
     {
-      "id": 59,
+      "id": 57,
       "front": "Neurons and activation functions",
       "back": [
         "Units apply nonlinear functions to inputs; they 'activate' to pass signals forward."
       ]
     },
     {
-      "id": 60,
+      "id": 58,
       "front": "Layers in a neural network",
       "back": [
         "Input layer → hidden layers (processing) → output layer (predictions)."
       ]
     },
     {
-      "id": 61,
+      "id": 59,
       "front": "Weights, biases, and parameters",
       "back": [
         "Weights connect neurons; biases shift activations; all trainable parameters are optimized during training."
       ]
     },
     {
-      "id": 62,
+      "id": 60,
       "front": "Why do large models often perform better?",
       "back": [
         "More parameters (often billions) can capture richer patterns, improving accuracy (with enough data/compute)."
       ]
     },
     {
-      "id": 63,
+      "id": 61,
       "front": "What is a Transformer model?",
       "back": [
         "A neural architecture based on attention mechanisms; foundation for modern LLMs like GPT."
       ]
     },
     {
-      "id": 64,
+      "id": 62,
       "front": "Generative AI can create…",
       "back": [
         "Natural language (chat, summaries, answers), images (text-to-image), and code (authoring, debugging)."
       ]
     },
     {
-      "id": 65,
+      "id": 63,
       "front": "What is a Large Language Model (LLM)?",
       "back": [
         "A Transformer-based model trained on massive text corpora to predict the next token in a sequence."
       ]
     },
     {
-      "id": 66,
+      "id": 64,
       "front": "LLM inference — how it works",
       "back": [
         "Given a prompt, the model repeatedly predicts the next token until an end condition is reached."
       ]
     },
     {
-      "id": 67,
+      "id": 65,
       "front": "LLM training data & compute",
       "back": [
         "Trained on large datasets (web, books, Wikipedia) using substantial GPU compute to learn parameters."
       ]
     },
     {
-      "id": 68,
+      "id": 66,
       "front": "Are LLM parameters updated during inference?",
       "back": [
         "No. At inference time, the model acts read-only; parameters don’t change."
       ]
     },
     {
-      "id": 69,
+      "id": 67,
       "front": "Transformer components: encoder & decoder",
       "back": [
         "Encoder processes inputs; decoder generates outputs. GPTs are primarily decoder-only."
       ]
     },
     {
-      "id": 70,
+      "id": 68,
       "front": "Text → tokens",
       "back": [
         "Input text is tokenized into words/sub-words/punctuation for processing."
       ]
     },
     {
-      "id": 71,
+      "id": 69,
       "front": "Tokens → embeddings",
       "back": [
         "Tokens become vectors that capture semantic meaning; similar meanings have similar vectors."
       ]
     },
     {
-      "id": 72,
+      "id": 70,
       "front": "Positional encoding purpose",
       "back": [
         "Adds word-order information to embeddings so the model understands sequence order."
       ]
     },
     {
-      "id": 73,
+      "id": 71,
       "front": "Multi-head self-attention",
       "back": [
         "Mechanism to relate tokens across the sequence, capturing dependencies and context."
       ]
     },
     {
-      "id": 74,
+      "id": 72,
       "front": "Masked self-attention (decoder-only)",
       "back": [
         "Ensures each token can only attend to previous tokens, not future ones."
       ]
     },
     {
-      "id": 75,
+      "id": 73,
       "front": "Feed-forward networks in Transformers",
       "back": [
         "Per-token neural layers that transform attended representations into richer features."
       ]
     },
     {
-      "id": 76,
+      "id": 74,
       "front": "Context representation",
       "back": [
         "The resulting vectors summarizing what the model has understood so far to predict next tokens."
       ]
     },
     {
-      "id": 77,
+      "id": 75,
       "front": "Encoder-decoder vs. decoder-only",
       "back": [
         "Some models use both components; GPT uses decoder-only with inputs fed to the decoder."
       ]
     },
     {
-      "id": 78,
+      "id": 76,
       "front": "What is GPT?",
       "back": [
         "OpenAI’s Generative Pre-trained Transformer series for advanced language generation."
       ]
     },
     {
-      "id": 79,
+      "id": 77,
       "front": "GPT versions & context windows",
       "back": [
         "GPT-3.5, GPT-4, GPT-4 Turbo; newer versions often have more parameters and larger context windows."
       ]
     },
     {
-      "id": 80,
+      "id": 78,
       "front": "What is ChatGPT?",
       "back": [
         "A GPT variant fine-tuned for dialogue using supervised learning and reinforcement learning from human feedback (RLHF)."
       ]
     },
     {
-      "id": 81,
+      "id": 79,
       "front": "What is a context window?",
       "back": [
         "The maximum tokens (input + output) processed in one interaction; larger windows handle longer prompts."
       ]
     },
     {
-      "id": 82,
+      "id": 80,
       "front": "Prompt engineering — definition",
       "back": [
         "Crafting precise prompts to guide model behavior and output quality."
       ]
     },
     {
-      "id": 83,
+      "id": 81,
       "front": "Prompt engineering — key techniques",
       "back": [
         "Be explicit; use role-playing; zero-shot and few-shot examples; include constraints and desired formats."
       ]
     },
     {
-      "id": 84,
+      "id": 82,
       "front": "What is grounding (RAG)?",
       "back": [
         "Augment the prompt with relevant external data to improve factuality and reduce hallucinations."
       ]
     },
     {
-      "id": 85,
+      "id": 83,
       "front": "Microsoft & OpenAI partnership",
       "back": [
         "Microsoft provides supercomputing infrastructure and Azure hosting for OpenAI models."
       ]
     },
     {
-      "id": 86,
+      "id": 84,
       "front": "What is Azure OpenAI Service?",
       "back": [
         "Azure access to OpenAI models (GPT, embeddings, DALL·E) with enterprise controls."
       ]
     },
     {
-      "id": 87,
+      "id": 85,
       "front": "Azure OpenAI — deployment & access",
       "back": [
         "Deploy model instances in your subscription; use Studio for testing; integrate via REST APIs."
       ]
     },
     {
-      "id": 88,
+      "id": 86,
       "front": "Azure OpenAI — pricing model",
       "back": [
         "Usage-based by tokens for prompts and completions."
       ]
     },
     {
-      "id": 89,
+      "id": 87,
       "front": "What are Microsoft Copilots?",
       "back": [
         "GenAI assistants embedded in Microsoft products (Word, Teams, Windows, Dynamics, Bing, Security)."
       ]
     },
     {
-      "id": 90,
+      "id": 88,
       "front": "Copilots as orchestrators",
       "back": [
         "They ground prompts with app/APIs (e.g., Microsoft Graph, Bing), build a meta-prompt, then call the LLM."
       ]
     },
     {
-      "id": 91,
+      "id": 89,
       "front": "Copilots — hosting & compliance",
       "back": [
         "Microsoft runs model instances within Azure to meet regulatory requirements; delivered as SaaS."
       ]
     },
     {
-      "id": 92,
+      "id": 90,
       "front": "Azure Machine Learning Studio — purpose",
       "back": [
         "Build, train, deploy, and manage custom ML models in the cloud."
       ]
     },
     {
-      "id": 93,
+      "id": 91,
       "front": "Azure ML — key capabilities",
       "back": [
         "Datasets & labeling, algorithm training, containerized deployment (on-prem, AKS, ACI)."
       ]
     },
     {
-      "id": 94,
+      "id": 92,
       "front": "Azure AI Services — Vision: Image Analysis v4.0",
       "back": [
         "Captions, tags, object detection, background removal, smart cropping, OCR; supports custom vision with fewer images."
       ]
     },
     {
-      "id": 95,
+      "id": 93,
       "front": "Azure AI Services — Face API",
       "back": [
         "Face detection, liveness, identification/verification, pose, masks, glasses, landmarks (no emotion/gender)."
       ]
     },
     {
-      "id": 96,
+      "id": 94,
       "front": "Azure AI Services — Custom Vision (legacy)",
       "back": [
         "Older CNN-based custom classification/detection; typically needs more images."
       ]
     },
     {
-      "id": 97,
+      "id": 95,
       "front": "Azure AI Services — Language Service",
       "back": [
         "Language detection, sentiment, key phrases, NER, summarization."
       ]
     },
     {
-      "id": 98,
+      "id": 96,
       "front": "Azure AI — Q&A Maker / Question Answering",
       "back": [
         "Build knowledge bases from FAQs or custom pairs for bots and apps."
       ]
     },
     {
-      "id": 99,
+      "id": 97,
       "front": "Azure AI — LUIS",
       "back": [
         "Language Understanding service to extract intents and entities from user utterances."
       ]
     },
     {
-      "id": 100,
+      "id": 98,
       "front": "Azure AI — Speech capabilities",
       "back": [
         "Text-to-Speech, Speech-to-Text, and Speech Translation."
       ]
     },
     {
-      "id": 101,
+      "id": 99,
       "front": "Azure AI — Translation Service",
       "back": [
         "Translate text/documents between languages; supports custom glossaries."
       ]
     },
     {
-      "id": 102,
+      "id": 100,
       "front": "Document Intelligence (Forms Recognizer)",
       "back": [
         "Extract structured data from PDFs/images, forms, receipts, invoices using pre-built or custom models."
       ]
     },
     {
-      "id": 103,
+      "id": 101,
       "front": "Document Intelligence — semantic understanding",
       "back": [
         "Goes beyond OCR to interpret fields like addresses and invoices."
       ]
     },
     {
-      "id": 104,
+      "id": 102,
       "front": "Azure AI Search — purpose",
       "back": [
         "Knowledge mining: make private, heterogeneous data searchable with AI enrichment."
       ]
     },
     {
-      "id": 105,
+      "id": 103,
       "front": "Azure AI Search — pipelines",
       "back": [
         "Ingest from blobs/DBs/lakes; apply skill sets (chunking, OCR, NLP) during indexing."
       ]
     },
     {
-      "id": 106,
+      "id": 104,
       "front": "Embeddings & vector indexes",
       "back": [
         "Store semantic vectors for similarity search; enable semantic and hybrid retrieval."
       ]
     },
     {
-      "id": 107,
+      "id": 105,
       "front": "Hybrid search & semantic ranking",
       "back": [
         "Combine keyword and vector results, rerank by semantic relevance for better answers."
       ]
     },
     {
-      "id": 108,
+      "id": 106,
       "front": "RAG with Azure AI Search",
       "back": [
         "Use vector/keyword retrieval over private data to ground LLM answers."
       ]
     },
     {
-      "id": 109,
+      "id": 107,
       "front": "Azure AI resource types — single vs. multi-service",
       "back": [
         "Single: one capability, often free tier, granular costs.",
@@ -794,401 +779,315 @@
       ]
     },
     {
-      "id": 110,
+      "id": 108,
       "front": "Specialized resources",
       "back": [
         "Azure OpenAI Resource (OpenAI models) and Azure AI Search Resource (knowledge mining)."
       ]
     },
     {
-      "id": 111,
+      "id": 109,
       "front": "Endpoints & authentication",
       "back": [
         "Each service exposes REST endpoints; use API Keys or Entra ID (Azure AD) RBAC with managed identities/service principals."
       ]
     },
     {
-      "id": 112,
+      "id": 110,
       "front": "SDKs for Azure AI",
       "back": [
         "Language SDKs simplify calling REST APIs from applications."
       ]
     },
     {
-      "id": 113,
+      "id": 111,
       "front": "Responsible AI — why it matters",
       "back": [
         "Ensures trustworthy, ethical AI; mitigates risks; maximizes societal benefit."
       ]
     },
     {
-      "id": 114,
+      "id": 112,
       "front": "Responsible AI — common risks",
       "back": [
         "Bias, errors, data exposure, lack of inclusivity/trust, unclear accountability."
       ]
     },
     {
-      "id": 115,
+      "id": 113,
       "front": "Microsoft Responsible AI principle: Fairness",
       "back": [
         "Treat people equitably; detect and mitigate bias via testing and controls."
       ]
     },
     {
-      "id": 116,
+      "id": 114,
       "front": "Microsoft Responsible AI principle: Reliability & Safety",
       "back": [
         "Systems must perform consistently and safely; require rigorous testing and robust ops."
       ]
     },
     {
-      "id": 117,
+      "id": 115,
       "front": "Microsoft Responsible AI principle: Privacy & Security",
       "back": [
         "Protect personal/sensitive data; scrub sources; enforce data governance."
       ]
     },
     {
-      "id": 118,
+      "id": 116,
       "front": "Microsoft Responsible AI principle: Inclusiveness",
       "back": [
         "Empower all users regardless of background; design accessible, inclusive systems."
       ]
     },
     {
-      "id": 119,
+      "id": 117,
       "front": "Microsoft Responsible AI principle: Transparency",
       "back": [
         "Explain system purpose, limits, and operation to build user trust."
       ]
     },
     {
-      "id": 120,
+      "id": 118,
       "front": "Microsoft Responsible AI principle: Accountability",
       "back": [
         "People and organizations remain responsible for AI outcomes and compliance."
       ]
     },
     {
-      "id": 121,
+      "id": 119,
       "front": "Responsible GenAI — identify harms",
       "back": [
         "Use red teaming and stress tests to surface potential negative outcomes."
       ]
     },
     {
-      "id": 122,
+      "id": 120,
       "front": "Responsible GenAI — measure & mitigate",
       "back": [
         "Assess severity/frequency; apply content filters, prompt constraints, and guardrails."
       ]
     },
     {
-      "id": 123,
+      "id": 121,
       "front": "Responsible GenAI — operations",
       "back": [
         "Continuously monitor, log, and update systems to maintain safety and quality."
       ]
     },
     {
-      "id": 124,
+      "id": 122,
       "front": "What are content filters?",
       "back": [
         "Built-in mechanisms restricting harmful/inappropriate outputs; tunable under policy."
       ]
     },
     {
-      "id": 125,
+      "id": 123,
       "front": "What is model jailbreaking?",
       "back": [
         "Attempts to bypass safety policies; requires layered, robust defenses."
       ]
     },
     {
-      "id": 126,
+      "id": 124,
       "front": "Quiz concept: Regular AI vs. Generative AI",
       "back": [
         "Regular AI imitates/predicts; Generative AI creates new content."
       ]
     },
     {
-      "id": 127,
+      "id": 125,
       "front": "Quiz concept: Role of parameters in DL",
       "back": [
         "Trainable weights/biases learned to represent complex patterns and make accurate predictions."
       ]
     },
     {
-      "id": 128,
+      "id": 126,
       "front": "Quiz concept: Why Azure AI Search beyond keywords?",
       "back": [
         "It supports vector/semantic retrieval and hybrid search with semantic ranking for better relevance."
       ]
     },
     {
-      "id": 129,
+      "id": 127,
       "front": "Glossary: Activation function",
       "back": [
         "Transforms neuron inputs; introduces nonlinearity to enable complex decision boundaries."
       ]
     },
     {
-      "id": 130,
+      "id": 128,
       "front": "Glossary: Context window",
       "back": [
         "Max tokens (input+output) an LLM can handle in one turn."
       ]
     },
     {
-      "id": 131,
+      "id": 129,
       "front": "Glossary: Embeddings",
       "back": [
         "Vector representations capturing semantic meaning of tokens/documents."
       ]
     },
     {
-      "id": 132,
+      "id": 130,
       "front": "Glossary: Vector index",
       "back": [
         "Structure enabling efficient similarity search over embeddings."
       ]
     },
     {
-      "id": 133,
+      "id": 131,
       "front": "Glossary: Hybrid search",
       "back": [
         "Combines keyword and vector search for comprehensive retrieval."
       ]
     },
     {
-      "id": 134,
+      "id": 132,
       "front": "Glossary: Semantic ranking",
       "back": [
         "Reranks results based on meaning rather than keyword overlap alone."
       ]
     },
     {
-      "id": 135,
+      "id": 133,
       "front": "Glossary: Token & tokenizer",
       "back": [
         "Token: text unit (word/sub-word/punctuation). Tokenizer: splits text into tokens."
       ]
     },
     {
-      "id": 136,
+      "id": 134,
       "front": "Glossary: Softmax",
       "back": [
         "Converts logits to probabilities, often in output layers."
       ]
     },
     {
-      "id": 137,
+      "id": 135,
       "front": "Glossary: Zero-shot vs. few-shot",
       "back": [
         "Zero-shot: no examples in prompt. Few-shot: include a few exemplars to steer behavior."
       ]
     },
     {
-      "id": 138,
+      "id": 136,
       "front": "Glossary: RLHF (concept in ChatGPT)",
       "back": [
         "Reinforcement Learning from Human Feedback aligns model behavior with human preferences."
       ]
     },
     {
-      "id": 139,
+      "id": 137,
       "front": "Glossary: Managed identity (Azure)",
       "back": [
         "Azure-provided identity for services, eliminating stored credentials; used with RBAC."
       ]
     },
     {
-      "id": 140,
+      "id": 138,
       "front": "Glossary: Endpoint & API keys",
       "back": [
         "Endpoint: service URL. API key: secret for authenticating requests (or use Entra ID)."
       ]
     },
     {
-      "id": 141,
+      "id": 139,
       "front": "Glossary: Document Intelligence",
       "back": [
         "Azure service for extracting structured data from documents via pre-built or custom models."
       ]
     },
     {
-      "id": 142,
+      "id": 140,
       "front": "Glossary: LUIS",
       "back": [
         "Language Understanding service that extracts intents and entities from text."
       ]
     },
     {
-      "id": 143,
-      "front": "What is Artificial Intelligence (AI)?",
-      "back": [
-        "AI is a computer’s ability to imitate some aspect of human behavior (e.g., speech recognition, image classification, translation)."
-      ]
-    },
-    {
-      "id": 144,
+      "id": 141,
       "front": "Give an early example of AI implementation.",
       "back": [
         "Early chess programs with explicitly coded logic."
       ]
     },
     {
-      "id": 145,
-      "front": "Define Machine Learning (ML).",
-      "back": [
-        "A subset of AI where computers learn patterns from data to make predictions without explicit rules for every case."
-      ]
-    },
-    {
-      "id": 146,
-      "front": "What are features and labels in ML?",
-      "back": [
-        "Features: input variables.",
-        "Labels: correct outputs used for supervised learning."
-      ]
-    },
-    {
-      "id": 147,
+      "id": 142,
       "front": "Name three classic ML algorithm families.",
       "back": [
         "Decision trees, linear/logistic regression, support vector machines."
       ]
     },
     {
-      "id": 148,
+      "id": 143,
       "front": "What is the typical ML workflow?",
       "back": [
         "Train on training data, evaluate on test/validation data, tune parameters, and deploy when performance is acceptable."
       ]
     },
     {
-      "id": 149,
-      "front": "What is supervised learning?",
-      "back": [
-        "Learning from labeled data to predict outputs for new inputs."
-      ]
-    },
-    {
-      "id": 150,
-      "front": "What is regression in ML?",
-      "back": [
-        "A supervised learning task that predicts continuous numeric values (e.g., house price)."
-      ]
-    },
-    {
-      "id": 151,
-      "front": "What is classification in ML?",
-      "back": [
-        "A supervised task that predicts categories or classes."
-      ]
-    },
-    {
-      "id": 152,
-      "front": "Binary vs. multiclass classification?",
-      "back": [
-        "Binary: two mutually exclusive classes.",
-        "Multiclass: more than two possible classes."
-      ]
-    },
-    {
-      "id": 153,
-      "front": "What is unsupervised learning?",
-      "back": [
-        "Learning patterns from unlabeled data, e.g., clustering similar data points."
-      ]
-    },
-    {
-      "id": 154,
+      "id": 144,
       "front": "What is Azure Machine Learning Studio used for?",
       "back": [
         "Building, training, evaluating, and deploying custom ML models, including data labeling and containerized deployment."
       ]
     },
     {
-      "id": 155,
-      "front": "Define Deep Learning (DL).",
-      "back": [
-        "A subset of ML using neural networks with many layers to model complex relationships."
-      ]
-    },
-    {
-      "id": 156,
+      "id": 145,
       "front": "What are neural network layers?",
       "back": [
         "Input layer, multiple hidden layers, and an output layer of interconnected neurons."
       ]
     },
     {
-      "id": 157,
+      "id": 146,
       "front": "What are weights and biases?",
       "back": [
         "Weights scale inputs along connections; biases shift neuron activation thresholds; both are learned during training."
       ]
     },
     {
-      "id": 158,
+      "id": 147,
       "front": "Name common activation functions.",
       "back": [
         "ReLU, sigmoid (among others)."
       ]
     },
     {
-      "id": 159,
+      "id": 148,
       "front": "Why is DL computationally intensive?",
       "back": [
         "Training deep networks requires large datasets and heavy compute (often GPUs) over long durations."
       ]
     },
     {
-      "id": 160,
+      "id": 149,
       "front": "What is softmax used for?",
       "back": [
         "To convert raw scores into a probability distribution over classes in the output layer."
       ]
     },
     {
-      "id": 161,
+      "id": 150,
       "front": "Define Generative AI.",
       "back": [
         "AI focused on creating original content (text, code, images) from learned patterns, not only imitating behavior."
       ]
     },
     {
-      "id": 162,
-      "front": "What are Large Language Models (LLMs)?",
-      "back": [
-        "Transformer-based deep learning models trained on massive text corpora to understand and generate language."
-      ]
-    },
-    {
-      "id": 163,
-      "front": "Why is “Attention Is All You Need” important?",
-      "back": [
-        "It introduced the Transformer architecture, enabling efficient self-attention for sequence modeling."
-      ]
-    },
-    {
-      "id": 164,
+      "id": 151,
       "front": "What parts of the Transformer does GPT use?",
       "back": [
         "Decoder-only architectures for next-token prediction."
       ]
     },
     {
-      "id": 165,
-      "front": "What is prompt engineering?",
-      "back": [
-        "Crafting inputs (prompts) to guide LLMs toward desired outputs, including zero-shot, few-shot, and grounding."
-      ]
-    },
-    {
-      "id": 166,
+      "id": 152,
       "front": "Zero-shot vs. few-shot prompting?",
       "back": [
         "Zero-shot: no examples provided.",
@@ -1196,459 +1095,133 @@
       ]
     },
     {
-      "id": 167,
-      "front": "What is grounding in LLM workflows?",
-      "back": [
-        "Adding relevant external data (search, databases, Graph APIs) to the prompt for factual, contextual answers."
-      ]
-    },
-    {
-      "id": 168,
-      "front": "What is tokenization?",
-      "back": [
-        "Splitting input text into tokens (words, subwords, punctuation, emojis) for model processing."
-      ]
-    },
-    {
-      "id": 169,
-      "front": "What are embeddings?",
-      "back": [
-        "High-dimensional vector representations of tokens capturing semantic meaning and similarity."
-      ]
-    },
-    {
-      "id": 170,
-      "front": "Why use positional encoding?",
-      "back": [
-        "To inject sequence order information into token embeddings."
-      ]
-    },
-    {
-      "id": 171,
-      "front": "Explain multi-headed self-attention.",
-      "back": [
-        "Parallel attention mechanisms that let models weigh different token relationships to maintain long-range context."
-      ]
-    },
-    {
-      "id": 172,
-      "front": "What is inference in LLMs?",
-      "back": [
-        "The process of predicting the next token(s) given a prompt until an end-of-sequence is reached."
-      ]
-    },
-    {
-      "id": 173,
+      "id": 153,
       "front": "How does scaling affect LLMs?",
       "back": [
         "More parameters and training data typically increase capability and generalization."
       ]
     },
     {
-      "id": 174,
+      "id": 154,
       "front": "What are Small Language Models (SLMs)?",
       "back": [
         "Smaller, specialized models optimized for cost and latency on targeted tasks."
       ]
     },
     {
-      "id": 175,
-      "front": "What is GPT?",
-      "back": [
-        "Generative Pre-trained Transformer series by OpenAI, trained on large corpora for generative tasks."
-      ]
-    },
-    {
-      "id": 176,
+      "id": 155,
       "front": "How do GPT versions differ?",
       "back": [
         "By capability and context window size (e.g., GPT-3.5, GPT-4, GPT-4 Turbo)."
       ]
     },
     {
-      "id": 177,
-      "front": "What is ChatGPT?",
-      "back": [
-        "A GPT-based system fine-tuned for conversational dialogue via supervised training and response scoring."
-      ]
-    },
-    {
-      "id": 178,
+      "id": 156,
       "front": "How is Microsoft related to OpenAI?",
       "back": [
         "Microsoft partners with OpenAI, providing supercomputing infrastructure and hosting models via Azure."
       ]
     },
     {
-      "id": 179,
-      "front": "What is Azure OpenAI Service?",
-      "back": [
-        "Enterprise access to OpenAI models (GPT, DALL·E, embeddings) within Azure with compliance and management controls."
-      ]
-    },
-    {
-      "id": 180,
+      "id": 157,
       "front": "What is Azure OpenAI Studio for?",
       "back": [
         "Managing deployments, experimenting in a Playground, and integrating models via APIs."
       ]
     },
     {
-      "id": 181,
-      "front": "What are Microsoft Copilots?",
-      "back": [
-        "AI assistants embedded in Microsoft products that orchestrate grounding and LLM calls to assist users."
-      ]
-    },
-    {
-      "id": 182,
-      "front": "How do Copilots process a user request?",
-      "back": [
-        "Take the prompt → ground with external data → build a meta-prompt → call LLM → present refined response."
-      ]
-    },
-    {
-      "id": 183,
+      "id": 158,
       "front": "Name typical Copilot capabilities.",
       "back": [
         "Summarization, content comparison/generation, code generation, and image generation (via DALL·E)."
       ]
     },
     {
-      "id": 184,
+      "id": 159,
       "front": "What service model do Copilots usually use?",
       "back": [
         "SaaS (Software as a Service)."
       ]
     },
     {
-      "id": 185,
-      "front": "What does Azure Computer Vision (Image Analysis v4.0) provide?",
-      "back": [
-        "Captions, tags, object detection, background removal, smart crop, OCR; Transformer-based."
-      ]
-    },
-    {
-      "id": 186,
-      "front": "What can Face API detect or verify?",
-      "back": [
-        "Faces, liveness, identification/verification, head pose, masks, glasses, landmarks (not emotion/gender)."
-      ]
-    },
-    {
-      "id": 187,
+      "id": 160,
       "front": "What is Custom Vision (legacy)?",
       "back": [
         "Older CNN-based custom image service that typically requires more training data."
       ]
     },
     {
-      "id": 188,
-      "front": "What does Azure Language Service do?",
-      "back": [
-        "Language detection, sentiment, key phrases, entities, summarization, and Q&A."
-      ]
-    },
-    {
-      "id": 189,
+      "id": 161,
       "front": "What is Azure Question Answering (Q&A)?",
       "back": [
         "A service to build knowledge bases of Q&A pairs for use by bots and apps."
       ]
     },
     {
-      "id": 190,
+      "id": 162,
       "front": "What is Azure Bot Service?",
       "back": [
         "A framework to build, publish, and manage bots across channels (Teams, web chat, email)."
       ]
     },
     {
-      "id": 191,
-      "front": "What is LUIS used for?",
-      "back": [
-        "Extracting intents and entities from user utterances (e.g., 'turn on the lights')."
-      ]
-    },
-    {
-      "id": 192,
-      "front": "Name the three Azure Speech capabilities.",
-      "back": [
-        "Text-to-Speech, Speech-to-Text, Speech Translation."
-      ]
-    },
-    {
-      "id": 193,
-      "front": "What does Azure Translation Service offer?",
+      "id": 163,
+      "front": "What does Azure Translator do?",
       "back": [
         "Text/document translation with custom domains, profanity filtering, and selective translation."
       ]
     },
     {
-      "id": 194,
-      "front": "What is Document Intelligence (Forms Recognizer)?",
-      "back": [
-        "Extracts structured data from forms/receipts/invoices with prebuilt and few-shot custom models."
-      ]
-    },
-    {
-      "id": 195,
-      "front": "What is Azure AI Search used for?",
-      "back": [
-        "Knowledge mining: indexing data sources, applying skill sets (e.g., OCR), and enabling keyword + vector (hybrid) search."
-      ]
-    },
-    {
-      "id": 196,
-      "front": "What is hybrid search?",
-      "back": [
-        "Combining keyword (lexical) and vector (semantic) search to improve relevance."
-      ]
-    },
-    {
-      "id": 197,
-      "front": "List the six Responsible AI principles.",
-      "back": [
-        "Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability."
-      ]
-    },
-    {
-      "id": 198,
-      "front": "What are common Azure AI resource deployment models?",
-      "back": [
-        "Single-service resources (often with free tiers), multi-service accounts (shared endpoint, no free tier), Azure OpenAI, and Azure AI Search as separate types."
-      ]
-    },
-    {
-      "id": 199,
-      "front": "How do you authenticate to Azure AI endpoints?",
-      "back": [
-        "API keys (store in Azure Key Vault) or Entra ID (Azure AD) with Role-Based Access Control (RBAC)."
-      ]
-    },
-    {
-      "id": 200,
-      "front": "Summarize AI → ML → DL relationship.",
-      "back": [
-        "ML is a subset of AI; DL is a subset of ML using multi-layer neural networks."
-      ]
-    },
-    {
-      "id": 201,
+      "id": 164,
       "front": "Give two examples of supervised learning outputs.",
       "back": [
         "Numeric regression (price), categorical classification (spam/not spam)."
       ]
     },
     {
-      "id": 202,
+      "id": 165,
       "front": "Name two benefits of Transformer architectures over older RNN/CNN for NLP.",
       "back": [
         "Parallelizable training via attention and better long-range dependency modeling."
       ]
     },
     {
-      "id": 203,
-      "front": "What is the fundamental difference between traditional AI and Generative AI?",
-      "back": [
-        "Traditional AI imitates human behaviors (e.g., recognition, classification, translation).",
-        "Generative AI creates original content (text, code, images) by learning patterns and producing novel outputs."
-      ]
-    },
-    {
-      "id": 204,
-      "front": "What is a prompt in the context of LLMs?",
-      "back": [
-        "A natural-language instruction or question given to a Large Language Model to guide its response."
-      ]
-    },
-    {
-      "id": 205,
+      "id": 166,
       "front": "How do LLMs like GPT generate text at a high level?",
       "back": [
         "Tokenize input → embed tokens → add positional information → apply self-attention layers → predict the next token repeatedly until done."
       ]
     },
     {
-      "id": 206,
-      "front": "What is tokenization?",
-      "back": [
-        "Splitting input text into smaller units (tokens) that the model can process."
-      ]
-    },
-    {
-      "id": 207,
-      "front": "What are embeddings?",
-      "back": [
-        "Numeric vector representations of tokens capturing semantic meaning so similar words have similar vectors."
-      ]
-    },
-    {
-      "id": 208,
-      "front": "What is positional encoding and why is it needed?",
-      "back": [
-        "A method of injecting token order into embeddings so the model can reason about word order and sequence."
-      ]
-    },
-    {
-      "id": 209,
-      "front": "What is self-attention (multi-head attention)?",
-      "back": [
-        "A mechanism that lets the model weigh relationships among tokens, maintaining context over long sequences via multiple attention heads."
-      ]
-    },
-    {
-      "id": 210,
-      "front": "What is the Transformer architecture?",
-      "back": [
-        "A model architecture introduced in 'Attention Is All You Need' with encoder and decoder components enabling efficient sequence modeling."
-      ]
-    },
-    {
-      "id": 211,
+      "id": 167,
       "front": "Do GPT-style LLMs use the full Transformer architecture?",
       "back": [
         "Modern GPT models are typically decoder-only Transformers focused on next-token prediction."
       ]
     },
     {
-      "id": 212,
-      "front": "How are OpenAI, GPT, and ChatGPT related?",
-      "back": [
-        "OpenAI created GPT models for next-token prediction.",
-        "ChatGPT is GPT further tuned for interactive dialogue and conversational tasks."
-      ]
-    },
-    {
-      "id": 213,
-      "front": "What is Azure OpenAI?",
-      "back": [
-        "Microsoft-hosted access to OpenAI models in Azure, exposing them as managed services for developers."
-      ]
-    },
-    {
-      "id": 214,
-      "front": "What are Microsoft Copilots and how do they work?",
-      "back": [
-        "Product-integrated assistants that orchestrate prompts, ground them with app data (e.g., Microsoft Graph), build meta-prompts, and call LLMs to generate responses."
-      ]
-    },
-    {
-      "id": 215,
-      "front": "What is Machine Learning (ML)?",
-      "back": [
-        "A subset of AI where models learn from data to make predictions or decisions without explicit programming."
-      ]
-    },
-    {
-      "id": 216,
-      "front": "What is supervised learning?",
-      "back": [
-        "Training on labeled data (features + correct labels) to learn mappings from inputs to outputs."
-      ]
-    },
-    {
-      "id": 217,
-      "front": "What is the difference between regression and classification?",
-      "back": [
-        "Regression predicts continuous numeric values (e.g., price).",
-        "Classification assigns categories/labels (e.g., spam vs. not spam; multiclass)."
-      ]
-    },
-    {
-      "id": 218,
-      "front": "What is unsupervised learning?",
-      "back": [
-        "Learning patterns from unlabeled data, often via clustering or dimensionality reduction."
-      ]
-    },
-    {
-      "id": 219,
-      "front": "What is Deep Learning?",
-      "back": [
-        "A subset of ML using multi-layer neural networks (neurons, weights, biases, activations) to learn complex patterns, often requiring large data and compute."
-      ]
-    },
-    {
-      "id": 220,
+      "id": 168,
       "front": "Why is Responsible AI crucial for Generative AI?",
       "back": [
         "GenAI can create new content, introducing risks like bias, harm, or misinformation; governance and safeguards are essential."
       ]
     },
     {
-      "id": 221,
-      "front": "What are the six Responsible AI principles?",
-      "back": [
-        "Fairness; Reliability & Safety; Privacy & Security; Inclusiveness; Transparency; Accountability."
-      ]
-    },
-    {
-      "id": 222,
-      "front": "What capabilities does Azure Computer Vision provide?",
-      "back": [
-        "Image captioning, tagging, object detection, background removal, smart cropping, OCR; Face API for detection, liveness, and identification/verification."
-      ]
-    },
-    {
-      "id": 223,
-      "front": "What capabilities are in Azure Natural Language services?",
-      "back": [
-        "Language detection, sentiment, key phrases, entity recognition, summarization, Q&A, and intent/entity parsing (LUIS)."
-      ]
-    },
-    {
-      "id": 224,
-      "front": "What can Azure Speech services do?",
-      "back": [
-        "Text-to-speech, speech-to-text transcription, and translation (text↔text, speech↔speech) across languages."
-      ]
-    },
-    {
-      "id": 225,
-      "front": "What is Azure Document Intelligence (Forms Recognizer)?",
-      "back": [
-        "A service that extracts structured data and semantics from documents (e.g., receipts, invoices), with custom models trainable from few examples."
-      ]
-    },
-    {
-      "id": 226,
-      "front": "What is Azure AI Search (Knowledge Mining)?",
-      "back": [
-        "Indexing of structured, semi-structured, and unstructured content with skill sets for enrichment, supporting both keyword and vector (semantic) search."
-      ]
-    },
-    {
-      "id": 227,
-      "front": "How do apps integrate with Azure AI services?",
-      "back": [
-        "Via REST endpoints using API keys or Entra ID (Azure AD) for RBAC; SDKs simplify development."
-      ]
-    },
-    {
-      "id": 228,
+      "id": 169,
       "front": "What is the role of Azure Machine Learning Studio?",
       "back": [
         "A platform to create datasets, label data, train/evaluate models, and deploy them to production."
       ]
     },
     {
-      "id": 229,
+      "id": 170,
       "front": "What is the Semantic Kernel and why use it?",
       "back": [
         "An orchestration framework that connects tools and data sources (e.g., Azure AI Search) to build grounded meta-prompts before invoking LLMs for more accurate, context-aware outputs."
       ]
     },
     {
-      "id": 230,
-      "front": "What is Artificial Intelligence (AI)?",
-      "back": [
-        "Computer systems designed to imitate some aspect of human behavior.",
-        "Covers tasks like speech recognition, image classification, translation, prediction and decision-making."
-      ]
-    },
-    {
-      "id": 231,
+      "id": 171,
       "front": "Give examples of AI capabilities.",
       "back": [
         "Recognizing speech and images.",
@@ -1658,402 +1231,148 @@
       ]
     },
     {
-      "id": 232,
-      "front": "What is Machine Learning (ML)?",
-      "back": [
-        "A subset of AI where systems learn from past data to train models that make future predictions."
-      ]
-    },
-    {
-      "id": 233,
+      "id": 172,
       "front": "What is training data in ML?",
       "back": [
         "Labeled datasets with features (inputs) and labels (correct outputs)."
       ]
     },
     {
-      "id": 234,
+      "id": 173,
       "front": "Name some common ML algorithms.",
       "back": [
         "Linear regression, decision trees, support vector machines and more."
       ]
     },
     {
-      "id": 235,
+      "id": 174,
       "front": "What is an ML model?",
       "back": [
         "The artifact produced by training that maps inputs to predicted outputs for new data."
       ]
     },
     {
-      "id": 236,
+      "id": 175,
       "front": "How are ML models improved?",
       "back": [
         "Iteratively test on held-out data and tune parameters until accuracy targets are met."
       ]
     },
     {
-      "id": 237,
+      "id": 176,
       "front": "What are the main types of ML?",
       "back": [
         "Supervised learning and unsupervised learning."
       ]
     },
     {
-      "id": 238,
-      "front": "Define supervised learning.",
-      "back": [
-        "Learning from labeled examples to predict outputs for unseen inputs."
-      ]
-    },
-    {
-      "id": 239,
-      "front": "What is regression in supervised learning?",
-      "back": [
-        "Predicting numeric values, e.g., house price from square footage."
-      ]
-    },
-    {
-      "id": 240,
-      "front": "What is classification in supervised learning?",
-      "back": [
-        "Assigning inputs to categories or classes."
-      ]
-    },
-    {
-      "id": 241,
-      "front": "Binary vs. multiclass classification?",
-      "back": [
-        "Binary: two outcomes (e.g., like vs. not like).",
-        "Multiclass: more than two outcomes (e.g., horror, fiction, learning)."
-      ]
-    },
-    {
-      "id": 242,
-      "front": "Define unsupervised learning.",
-      "back": [
-        "Learning patterns from unlabeled data, often via clustering similar items."
-      ]
-    },
-    {
-      "id": 243,
-      "front": "What is Deep Learning?",
-      "back": [
-        "An ML subset using multi-layer neural networks to model complex relationships."
-      ]
-    },
-    {
-      "id": 244,
+      "id": 177,
       "front": "Name the basic layers of a neural network.",
       "back": [
         "Input layer, hidden layers, output layer."
       ]
     },
     {
-      "id": 245,
+      "id": 178,
       "front": "What are activation functions?",
       "back": [
         "Neuron rules that decide whether to pass a value onward based on inputs."
       ]
     },
     {
-      "id": 246,
-      "front": "What are weights and biases?",
-      "back": [
-        "Adjustable parameters on connections (weights) and neurons (biases) learned during training."
-      ]
-    },
-    {
-      "id": 247,
+      "id": 179,
       "front": "How resource-intensive is deep learning training?",
       "back": [
         "Large models can require months of training and tens of thousands of powerful GPUs."
       ]
     },
     {
-      "id": 248,
-      "front": "What is Generative AI?",
-      "back": [
-        "AI that creates original content (text, code, images) rather than only imitating or classifying."
-      ]
-    },
-    {
-      "id": 249,
-      "front": "How does Generative AI differ from regular AI?",
-      "back": [
-        "Regular AI: imitates or predicts.",
-        "Generative AI: produces new content from learned patterns."
-      ]
-    },
-    {
-      "id": 250,
+      "id": 180,
       "front": "What can Generative AI produce?",
       "back": [
         "Natural language (conversations, summaries, code), images and other media."
       ]
     },
     {
-      "id": 251,
-      "front": "What are Large Language Models (LLMs)?",
-      "back": [
-        "Models like GPT and LLaMA trained on vast corpora with billions or trillions of parameters."
-      ]
-    },
-    {
-      "id": 252,
-      "front": "What is the Transformer architecture?",
-      "back": [
-        "A model design introduced by “Attention Is All You Need,” with encoder and decoder components; GPT commonly uses the decoder."
-      ]
-    },
-    {
-      "id": 253,
-      "front": "What is a prompt?",
-      "back": [
-        "Natural-language instructions given to an LLM; prompt quality strongly affects response quality."
-      ]
-    },
-    {
-      "id": 254,
+      "id": 181,
       "front": "List key prompt engineering techniques.",
       "back": [
         "Be explicit, use role prompting, zero-shot, few-shot examples."
       ]
     },
     {
-      "id": 255,
-      "front": "What is grounding (RAG)?",
-      "back": [
-        "Retrieval Augmented Generation: bring external data (e.g., documents, emails, search indexes) into the prompt to provide context."
-      ]
-    },
-    {
-      "id": 256,
-      "front": "What is token prediction (inference)?",
-      "back": [
-        "An LLM iteratively predicts the next token until it reaches an end-of-sequence."
-      ]
-    },
-    {
-      "id": 257,
-      "front": "What is tokenization?",
-      "back": [
-        "Converting text into tokens (subwords, words, punctuation, emojis) for numerical processing."
-      ]
-    },
-    {
-      "id": 258,
-      "front": "What are embeddings?",
-      "back": [
-        "High-dimensional vectors representing semantic meaning; similar meanings have nearby vectors."
-      ]
-    },
-    {
-      "id": 259,
-      "front": "What is positional encoding?",
-      "back": [
-        "Information added to embeddings to represent token positions because word order matters."
-      ]
-    },
-    {
-      "id": 260,
-      "front": "What is self-attention and why is it important?",
-      "back": [
-        "A mechanism that relates tokens to each other across the sequence to maintain context."
-      ]
-    },
-    {
-      "id": 261,
+      "id": 182,
       "front": "What is OpenAI known for?",
       "back": [
         "Developing GPT models and major advances in generative AI."
       ]
     },
     {
-      "id": 262,
+      "id": 183,
       "front": "How do GPT model versions differ?",
       "back": [
         "By parameter count and context window (e.g., GPT-4 Turbo supports ~128K input tokens, ~4K output tokens)."
       ]
     },
     {
-      "id": 263,
-      "front": "What makes ChatGPT different from base GPT?",
-      "back": [
-        "Additional supervised training and alignment for interactive dialogue."
-      ]
-    },
-    {
-      "id": 264,
+      "id": 184,
       "front": "What is Microsoft’s role in generative AI?",
       "back": [
         "Partner providing large-scale data center infrastructure and GPU supercomputers for training."
       ]
     },
     {
-      "id": 265,
-      "front": "What are Microsoft Copilots?",
-      "back": [
-        "Orchestrators that integrate LLMs into products like Word, Teams, Bing, Windows and Dynamics."
-      ]
-    },
-    {
-      "id": 266,
-      "front": "Describe the Copilot orchestration flow.",
-      "back": [
-        "Take prompt, perform grounding via APIs (e.g., Microsoft Graph, Bing), build a meta-prompt, call LLM, return refined response."
-      ]
-    },
-    {
-      "id": 267,
-      "front": "What can Copilots do beyond text responses?",
-      "back": [
-        "Suggest next steps and call available APIs to execute actions; support multimodal features (e.g., images) in Bing Chat."
-      ]
-    },
-    {
-      "id": 268,
-      "front": "What is Azure OpenAI Service?",
-      "back": [
-        "Azure-hosted access to OpenAI models (GPT, embeddings, DALL·E) with usage-based pricing."
-      ]
-    },
-    {
-      "id": 269,
+      "id": 185,
       "front": "What is Azure OpenAI Studio?",
       "back": [
         "A UI to experiment, deploy models and expose them via API."
       ]
     },
     {
-      "id": 270,
+      "id": 186,
       "front": "How do apps connect LLMs to proprietary data on Azure?",
       "back": [
         "Use Azure AI Search and orchestration (e.g., Semantic Kernel) with vector embeddings for semantic retrieval."
       ]
     },
     {
-      "id": 271,
-      "front": "What does Azure Computer Vision Image Analysis (v4.0) do?",
-      "back": [
-        "Captions, tags, object detection with boxes, background removal, smart crop and OCR for small text."
-      ]
-    },
-    {
-      "id": 272,
+      "id": 187,
       "front": "How are custom vision models trained on Azure today?",
       "back": [
         "With relatively few images using Transformer-based architectures, often outperforming older CNNs."
       ]
     },
     {
-      "id": 273,
-      "front": "What can Azure Face service detect?",
+      "id": 188,
+      "front": "What does Azure Face service detect?",
       "back": [
         "Faces, liveness, identity verification, head pose, masks, glasses and facial landmarks.",
         "No emotion or gender detection supported."
       ]
     },
     {
-      "id": 274,
-      "front": "What can the Azure Language Service do?",
-      "back": [
-        "Language detection, sentiment, key phrases, entity recognition, summarization and question answering."
-      ]
-    },
-    {
-      "id": 275,
+      "id": 189,
       "front": "How does Azure Question Answering work?",
       "back": [
         "Builds a knowledge base of Q&A pairs often used by bots (e.g., via Azure Bot Service)."
       ]
     },
     {
-      "id": 276,
-      "front": "What is LUIS in the Azure ecosystem?",
-      "back": [
-        "Language Understanding for extracting intents and entities from user utterances."
-      ]
-    },
-    {
-      "id": 277,
-      "front": "What are the Azure Speech service capabilities?",
-      "back": [
-        "Text-to-speech, speech-to-text transcription, language recognition and speech translation."
-      ]
-    },
-    {
-      "id": 278,
-      "front": "What can Azure Translator do?",
-      "back": [
-        "Translate text/documents across 60+ languages with custom dictionaries, profanity filtering and selective translation."
-      ]
-    },
-    {
-      "id": 279,
-      "front": "What is Azure Document Intelligence used for?",
-      "back": [
-        "Extracting structured data from forms, receipts, invoices and long documents."
-      ]
-    },
-    {
-      "id": 280,
+      "id": 190,
       "front": "Does Document Intelligence support prebuilt and custom models?",
       "back": [
         "Yes. Prebuilt models for common docs and no-code custom models trained with as few as five samples."
       ]
     },
     {
-      "id": 281,
-      "front": "What is Azure AI Search (Knowledge Mining)?",
-      "back": [
-        "A service to ingest, enrich and index large datasets for keyword and vector (semantic) search."
-      ]
-    },
-    {
-      "id": 282,
+      "id": 191,
       "front": "Name common enrichment steps in AI Search skillsets.",
       "back": [
         "Chunking large docs, generating embeddings, calling other services (e.g., Vision for OCR)."
       ]
     },
     {
-      "id": 283,
-      "front": "What is hybrid search on Azure AI Search?",
-      "back": [
-        "Combining keyword and vector search with semantic ranking for better natural-language results."
-      ]
-    },
-    {
-      "id": 284,
-      "front": "What Azure AI resource types exist?",
-      "back": [
-        "Single-service (e.g., Vision, Speech), multi-service (broad APIs), Azure OpenAI, and Azure AI Search."
-      ]
-    },
-    {
-      "id": 285,
-      "front": "How do apps call Azure AI services?",
-      "back": [
-        "Via REST endpoints exposed by each service."
-      ]
-    },
-    {
-      "id": 286,
-      "front": "How is authentication handled for Azure AI services?",
-      "back": [
-        "API keys stored securely (e.g., Key Vault) or Azure AD (Entra ID) with RBAC and managed identities."
-      ]
-    },
-    {
-      "id": 287,
-      "front": "List Microsoft’s six Responsible AI principles.",
-      "back": [
-        "Fairness, Reliability and Safety, Privacy and Security, Inclusiveness, Transparency, Accountability."
-      ]
-    },
-    {
-      "id": 288,
+      "id": 192,
       "front": "What is the practical application of Responsible AI on Azure?",
       "back": [
         "Built-in content filters and protections; some severities adjustable; certain features require special permissions."
