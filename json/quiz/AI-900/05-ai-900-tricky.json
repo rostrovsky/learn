@@ -1,0 +1,198 @@
+{
+  "title": "Quiz: AI-900 Targeted Review (Azure AI & Responsible AI)",
+  "version": 1,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple",
+      "prompt": "Designing an AI system to manage healthcare data: which Responsible AI principles are most critical?",
+      "choices": [
+        { "id": 1, "text": "Accountability", "is_correct": true },
+        { "id": 2, "text": "Privacy & Security", "is_correct": true },
+        { "id": 3, "text": "Inclusiveness", "is_correct": false },
+        { "id": 4, "text": "Fairness", "is_correct": false }
+      ],
+      "explanation": "Healthcare scenarios prioritize safeguarding sensitive data and ensuring humans remain responsible for outcomes: Accountability + Privacy & Security."
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "prompt": "Which service directly enables text-to-text translation across many languages?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Translator", "is_correct": true },
+        { "id": 2, "text": "Key Phrase Extraction", "is_correct": false },
+        { "id": 3, "text": "Language Detection", "is_correct": false },
+        { "id": 4, "text": "Conversational Language Understanding (CLU)", "is_correct": false }
+      ],
+      "explanation": "Azure AI Translator handles text↔text translation; detection/CLU/KPE are for different NLP tasks."
+    },
+    {
+      "id": 3,
+      "type": "multiple",
+      "prompt": "You need both text↔text and speech↔text capabilities for multilingual conversations. Which Azure services should you combine?",
+      "choices": [
+        { "id": 1, "text": "Azure AI Speech", "is_correct": true },
+        { "id": 2, "text": "Azure AI Translator", "is_correct": true },
+        { "id": 3, "text": "Azure AI Bot Service", "is_correct": false },
+        { "id": 4, "text": "Key Phrase Extraction", "is_correct": false }
+      ],
+      "explanation": "Use Translator for text translation and Speech for speech recognition and text-to-speech; together they support multilingual dialogues."
+    },
+    {
+      "id": 4,
+      "type": "single",
+      "prompt": "Which statement best describes Generative AI?",
+      "choices": [
+        { "id": 1, "text": "A technique for grouping data points into clusters.", "is_correct": false },
+        { "id": 2, "text": "A capability that can create new content like text, images, or code from natural language prompts.", "is_correct": true },
+        { "id": 3, "text": "A synonym for deep learning.", "is_correct": false },
+        { "id": 4, "text": "A method for predicting a numeric value from features.", "is_correct": false }
+      ],
+      "explanation": "Generative AI produces original content (text, code, images) based on prompts."
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "prompt": "You need to output a probability that a person has diabetes (Yes/No) from age and body fat %. Which model fits?",
+      "choices": [
+        { "id": 1, "text": "Linear regression", "is_correct": false },
+        { "id": 2, "text": "Logistic regression", "is_correct": true },
+        { "id": 3, "text": "Hierarchical clustering", "is_correct": false },
+        { "id": 4, "text": "K-Means clustering", "is_correct": false }
+      ],
+      "explanation": "Logistic regression is for classification and outputs class probabilities."
+    },
+    {
+      "id": 6,
+      "type": "multiple",
+      "prompt": "From support tickets, you want to find main issues and also detect mentioned people/products. Which features apply?",
+      "choices": [
+        { "id": 1, "text": "Key Phrase Extraction", "is_correct": true },
+        { "id": 2, "text": "Named Entity Recognition (NER)", "is_correct": true },
+        { "id": 3, "text": "Azure AI Bot Service", "is_correct": false },
+        { "id": 4, "text": "Azure AI Speech", "is_correct": false }
+      ],
+      "explanation": "KPE surfaces main topics/issues; NER identifies entities like people, orgs, products."
+    },
+    {
+      "id": 7,
+      "type": "multiple",
+      "prompt": "You must extract info from international passports and from sales invoices. Which Document Intelligence prebuilt models should you pick?",
+      "choices": [
+        { "id": 1, "text": "ID Document model", "is_correct": true },
+        { "id": 2, "text": "Invoice model", "is_correct": true },
+        { "id": 3, "text": "Business Card model", "is_correct": false },
+        { "id": 4, "text": "Receipt model", "is_correct": false }
+      ],
+      "explanation": "Use ID Document for passports/IDs; Invoice for sales invoices/accounts."
+    },
+    {
+      "id": 8,
+      "type": "multiple",
+      "prompt": "Azure AI Face: which operations perform identity matching?",
+      "choices": [
+        { "id": 1, "text": "Face Identification", "is_correct": true },
+        { "id": 2, "text": "Face Verification", "is_correct": true },
+        { "id": 3, "text": "Face Attributes", "is_correct": false },
+        { "id": 4, "text": "Find Similar", "is_correct": false }
+      ],
+      "explanation": "Identification = one-to-many; Verification = one-to-one. Attributes/find-similar don’t verify identity."
+    },
+    {
+      "id": 9,
+      "type": "single",
+      "prompt": "Why is 'Language Detection' not a valid choice for enabling multilingual translation workflows on its own?",
+      "choices": [
+        { "id": 1, "text": "It only recognizes the language but does not translate text.", "is_correct": true },
+        { "id": 2, "text": "It translates only from English to Spanish.", "is_correct": false },
+        { "id": 3, "text": "It is part of the Speech service.", "is_correct": false },
+        { "id": 4, "text": "It is a deprecated feature.", "is_correct": false }
+      ],
+      "explanation": "Language detection identifies the language; Translator performs the translation."
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "prompt": "Pick the best pair for end-to-end speech translation (person speaks in Lang A; another hears in Lang B).",
+      "choices": [
+        { "id": 1, "text": "Speech + Translator", "is_correct": true },
+        { "id": 2, "text": "Key Phrase Extraction + NER", "is_correct": false },
+        { "id": 3, "text": "CLU + Bot Service", "is_correct": false },
+        { "id": 4, "text": "Language Detection + CLU", "is_correct": false }
+      ],
+      "explanation": "Speech handles speech↔text and text→speech; Translator handles text↔text translation."
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "prompt": "Which choice clarifies the difference between Linear and Logistic Regression?",
+      "choices": [
+        { "id": 1, "text": "Linear predicts continuous values; Logistic predicts class probabilities for categorical outcomes.", "is_correct": true },
+        { "id": 2, "text": "Both are used only for clustering.", "is_correct": false },
+        { "id": 3, "text": "Logistic is for numeric predictions; Linear for classification.", "is_correct": false },
+        { "id": 4, "text": "They are identical models with different names.", "is_correct": false }
+      ],
+      "explanation": "Linear → continuous regression; Logistic → classification with probabilities."
+    },
+    {
+      "id": 12,
+      "type": "multiple",
+      "prompt": "You must ensure an AI system for patient records meets legal/ethical requirements and protects PHI. Select the right principles.",
+      "choices": [
+        { "id": 1, "text": "Accountability", "is_correct": true },
+        { "id": 2, "text": "Privacy & Security", "is_correct": true },
+        { "id": 3, "text": "Inclusiveness", "is_correct": false },
+        { "id": 4, "text": "Reliability only", "is_correct": false }
+      ],
+      "explanation": "Accountability ensures responsible oversight; Privacy & Security protects sensitive health data."
+    },
+    {
+      "id": 13,
+      "type": "single",
+      "prompt": "Which option correctly completes the sentence: “_____ can return natural language, images, or code in response to a natural language input.”",
+      "choices": [
+        { "id": 1, "text": "Generative AI", "is_correct": true },
+        { "id": 2, "text": "Key Phrase Extraction", "is_correct": false },
+        { "id": 3, "text": "Deep Learning (as a field)", "is_correct": false },
+        { "id": 4, "text": "Named Entity Recognition", "is_correct": false }
+      ],
+      "explanation": "Generative AI creates new content across modalities; the others are narrower NLP tasks or techniques."
+    },
+    {
+      "id": 14,
+      "type": "multiple",
+      "prompt": "Document Intelligence mapping: choose the correct model for each document type in this scenario (passports + sales accounts).",
+      "choices": [
+        { "id": 1, "text": "ID Document model for passports", "is_correct": true },
+        { "id": 2, "text": "Invoice model for sales accounts/invoices", "is_correct": true },
+        { "id": 3, "text": "Receipt model for passports", "is_correct": false },
+        { "id": 4, "text": "Business Card model for invoices", "is_correct": false }
+      ],
+      "explanation": "ID Document is optimized for IDs/passports; Invoice is optimized for invoicing fields."
+    },
+    {
+      "id": 15,
+      "type": "single",
+      "prompt": "For one-to-one face matching (is this the same person?), which operation should you use in Azure AI Face?",
+      "choices": [
+        { "id": 1, "text": "Face Attributes", "is_correct": false },
+        { "id": 2, "text": "Face Verification", "is_correct": true },
+        { "id": 3, "text": "Find Similar", "is_correct": false },
+        { "id": 4, "text": "Face Identification", "is_correct": false }
+      ],
+      "explanation": "Verification = one-to-one; Identification = one-to-many."
+    },
+    {
+      "id": 16,
+      "type": "multiple",
+      "prompt": "Mining support tickets: which pair helps summarize issues and extract the names of people/products?",
+      "choices": [
+        { "id": 1, "text": "Key Phrase Extraction", "is_correct": true },
+        { "id": 2, "text": "Named Entity Recognition", "is_correct": true },
+        { "id": 3, "text": "Translator", "is_correct": false },
+        { "id": 4, "text": "Language Detection", "is_correct": false }
+      ],
+      "explanation": "KPE highlights main issues; NER pulls structured entities (people, orgs, products, etc.)."
+    }
+  ]
+}

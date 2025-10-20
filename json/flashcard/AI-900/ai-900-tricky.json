@@ -1,0 +1,111 @@
+{
+  "title": "AI-900 Tricky Points — Targeted Flashcards",
+  "version": 1,
+  "cards": [
+    {
+      "id": 1,
+      "front": "Responsible AI for healthcare data: Which two principles matter most?",
+      "back": [
+        "Accountability + Privacy & Security.",
+        "Accountability: meet legal/ethical standards; assign human oversight.",
+        "Privacy & Security: protect PII/PHI, anonymize where possible, secure data at rest/in transit.",
+        "Not primary here: Fairness (treat users fairly), Inclusiveness (empower everyone)."
+      ]
+    },
+    {
+      "id": 2,
+      "front": "Mnemonic: Responsible AI in healthcare (which 2)?",
+      "back": [
+        "Think “AP” like ‘Anonymize & Provenance’:",
+        "A = Accountability (humans answer for outcomes).",
+        "P = Privacy/Security (PHI protection first)."
+      ]
+    },
+    {
+      "id": 3,
+      "front": "Azure translation across text↔speech and multiple languages: which services?",
+      "back": [
+        "Translator + Speech.",
+        "Translator: text↔text in many languages.",
+        "Speech: speech↔text and text→speech (can pair with Translator for speech translation).",
+        "Not for translation: Key phrase extraction, CLU, Language detection (helps detect, not translate)."
+      ]
+    },
+    {
+      "id": 4,
+      "front": "Generative AI definition (complete the sentence):",
+      "back": [
+        "Generative AI returns responses (natural language, images, code, etc.) from natural language input.",
+        "Contrast: ‘Deep learning’ is a technique; ‘Generative AI’ is a capability that produces new content."
+      ]
+    },
+    {
+      "id": 5,
+      "front": "Predict probability of diabetes (yes/no) from age & body fat: which model?",
+      "back": [
+        "Logistic regression (classification → probability 0–1).",
+        "Linear regression predicts continuous values, not classes.",
+        "Hierarchical clustering is unsupervised grouping, not probability classification."
+      ]
+    },
+    {
+      "id": 6,
+      "front": "Extract main issues from support tickets and also find people/products mentioned. Which features?",
+      "back": [
+        "Key Phrase Extraction + Named Entity Recognition (NER).",
+        "Key Phrases: main topics/issues.",
+        "NER: detects entities (people, organizations, products, locations, quantities).",
+        "Not for this: Bot Service, Speech, CLU (intent/slot for dialogs, not bulk mining)."
+      ]
+    },
+    {
+      "id": 7,
+      "front": "Azure AI Document Intelligence: scan international passports + sales accounts?",
+      "back": [
+        "ID Document model (passports, driver’s licenses) + Invoice model (sales invoices/accounts).",
+        "Not ideal: Business card, Receipt, generic ‘Language’ models."
+      ]
+    },
+    {
+      "id": 8,
+      "front": "Azure AI Face: one-to-many vs one-to-one identity checks—what to use?",
+      "back": [
+        "Face Identification: one-to-many (match one face to a collection).",
+        "Face Verification: one-to-one (same person? yes/no).",
+        "Face attributes/find-similar do not establish identity."
+      ]
+    },
+    {
+      "id": 9,
+      "front": "Why not choose ‘Inclusiveness’ as a top-2 principle for healthcare data designs?",
+      "back": [
+        "Inclusiveness is important broadly, but protecting sensitive health data and ensuring accountability are the priority risks to mitigate for healthcare data management scenarios."
+      ]
+    },
+    {
+      "id": 10,
+      "front": "Why isn’t ‘Language detection’ the right choice for multilingual translation tasks?",
+      "back": [
+        "Language detection identifies the language; it doesn’t translate.",
+        "Use Translator for text↔text and combine Speech for speech↔text/text→speech."
+      ]
+    },
+    {
+      "id": 11,
+      "front": "Logistic vs Linear Regression (quick rule of thumb):",
+      "back": [
+        "Logistic: classification (probability of class membership).",
+        "Linear: continuous numeric prediction (e.g., price, temperature)."
+      ]
+    },
+    {
+      "id": 12,
+      "front": "Document Intelligence quick mapping:",
+      "back": [
+        "Passport/ID page → ID Document model.",
+        "Sales invoice/account docs → Invoice model.",
+        "Receipts → Receipt model; Business cards → Business Card model."
+      ]
+    }
+  ]
+}
